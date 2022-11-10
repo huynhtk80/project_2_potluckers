@@ -10,8 +10,8 @@ function PlanYourOwnEvent() {
               <h1>Plan Your Own Event</h1>
             </span>
             <p>
-              hjfasdkjhLorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Gravida cum sociis natoque penatibus et. Velit laoreet id donec
               ultrices tincidunt arcu non. Ut etiam sit amet nisl purus.
               Curabitur gravida arcu ac tortor dignissim. Nulla porttitor massa

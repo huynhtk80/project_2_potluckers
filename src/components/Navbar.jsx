@@ -1,6 +1,6 @@
 import React from "react";
 import "./navigation.css";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -16,28 +16,26 @@ function Navbar() {
       </header>
       <header id="nav-header">
         <h1>
-          <Link to="/" id="nav-logo">
+          <NavLink to="/" id="nav-logo">
             LOGO
-          </Link>
+          </NavLink>
         </h1>
         <nav>
           <ul>
             <li>
-              <Link to="/" class="active">
-                Home
-              </Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/PlanYourOwnEvent">Plan Your Own Event</Link>
+              <NavLink to="/PlanYourOwnEvent">Plan Your Own Event</NavLink>
             </li>
             <li>
-              <Link to="/MealPlanningRecipes">Meal Planning/Recipes</Link>
+              <NavLink to="/MealPlanningRecipes">Meal Planning/Recipes</NavLink>
             </li>
             <li>
-              <Link to="/ExistingEvents">Existing Events</Link>
+              <NavLink to="/ExistingEvents">Existing Events</NavLink>
             </li>
             <li>
-              <Link to="/Aboutus">About Us</Link>
+              <NavLink to="/Aboutus">About Us</NavLink>
             </li>
           </ul>
         </nav>
