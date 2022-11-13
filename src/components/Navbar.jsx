@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navigation.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+  let [loginStatus, setLoginStatus] = useState(false);
+
   return (
     <div id="header-background">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/Dashboard">Log In/Sign Up</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      {/* login test hide test: https://reactjs.org/docs/conditional-rendering.html*/}
+      {loginStatus && (
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/Dashboard">Log In/Sign Up</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
       <header id="nav-header">
         <h1>
           <NavLink to="/" id="nav-logo">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Aboutus() {
   return (
@@ -27,7 +28,8 @@ function Aboutus() {
               Vel risus commodo viverra maecenas accumsan. Dictum fusce ut
               placerat orci. Ligula ullamcorper malesuada proin libero nunc
               consequat interdum varius. Viverra justo nec ultrices dui. Elit
-              sed vulputate mi sit amet. Sed sed risus pretium.
+              sed vulputate mi sit amet. Sed sed risus pretium.{" "}
+              <Link to="/PlanYourOwnEvent">Plan Your Own Event</Link>
             </p>
           </h3>
         </div>
