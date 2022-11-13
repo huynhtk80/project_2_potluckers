@@ -2,30 +2,30 @@
 Potlockers
 </h1>
 
-# Table of Contents
+## Table of Contents
 
-[Introduction](#introduction)
-[Technologies Used](#technologies-used)
-[Kamikaze Cheese Team Members](#kamikaze-cheese-team-members)
-[Getting Started with Create React App](#getting-started-with-create-app)
-[Available Scripts](#available-scripts)
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Kamikaze Cheese Team Members](#kamikaze-cheese-team-members)
+- [Getting Started with Create React App](#getting-started-with-create-app)
+- [Available Scripts](#available-scripts)
 
-# Introduction
+## Introduction
 
 Organizing potlucks is hard. You need to know allergies, preferences, cutlery, clean-up crew and much more. What if I tell you that there is an app to make you life easier? well, I present to you the Potlockers app. This application is made by the Kamikaze Cheese Team and our goal is to make organizing potlucks way easier than it should be. Our team core value is food. Potlockers will allow you to add/remove foods from you potlock list. In addition, you can look up recipes for the food your are bringing, organize who brings in the cutlery, organize who cleans-up after the event, exclude certain types of food because of allergies and other additional features. We hope that by using this app, eating food with the people you enjoy to be the best experience it can be.
 
-# Technologies Used
+## Technologies Used
 
 Node.js Javascript HTML CSS MongoDB Express.js
 
-# Kamikaze Cheese Team Members
+## Kamikaze Cheese Team Members
 
 Kshitija Shirsathe
 Romell Bermundo
 Timothy Huynh
 Tyler Sartison
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
