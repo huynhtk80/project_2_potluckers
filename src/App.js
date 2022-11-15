@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Aboutus from "./pages/Aboutus";
 import MealPlanningRecipes from "./pages/MealPlanningRecipes";
@@ -11,23 +10,28 @@ import PlanYourOwnEvent from "./pages/PlanYourOwnEvent";
 
 import "./styles.css";
 import Dashboard from "./pages/Dashboard";
+import Landing from "./pages/Landing";
+import Notfound from "./pages/Notfound";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar />}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Navbar />}>
             <Route index element={<Index />} />
-            <Route path="/Aboutus" element={<Aboutus />} />
+            <Route path="Aboutus" element={<Aboutus />} />
             <Route
-              path="/MealPlanningRecipes"
+              path="MealPlanningRecipes"
               element={<MealPlanningRecipes />}
             />
-            <Route path="/ExistingEvents" element={<ExistingEvents />} />
-            <Route path="/PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="ExistingEvents" element={<ExistingEvents />} />
+            <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
+            <Route path="Dashboard" element={<Dashboard />} />
+            <Route path="*" element={<Notfound />} />
           </Route>
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
     </>

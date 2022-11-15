@@ -29,7 +29,7 @@ function Aboutus() {
               placerat orci. Ligula ullamcorper malesuada proin libero nunc
               consequat interdum varius. Viverra justo nec ultrices dui. Elit
               sed vulputate mi sit amet. Sed sed risus pretium.{" "}
-              <Link to="/PlanYourOwnEvent">Plan Your Own Event</Link>
+              <Link to="/home/PlanYourOwnEvent">Plan Your Own Event</Link>
             </p>
           </h3>
         </div>
