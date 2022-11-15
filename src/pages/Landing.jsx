@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 function Landing() {
   return (
     <>
-      <div>Landing</div>
+      <div>
+        <span className="title-main">
+          <h1>Landing</h1>
+        </span>
+      </div>
       <Link to="/home">Home</Link>
     </>
   );
