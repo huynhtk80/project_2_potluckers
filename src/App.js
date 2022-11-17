@@ -12,6 +12,7 @@ import "./styles.css";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Notfound from "./pages/Notfound";
+import UserAuth from "./pages/UserAuth";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+
           <Route path="/home" element={<Navbar />}>
             <Route index element={<Index />} />
             <Route path="Aboutus" element={<Aboutus />} />
@@ -29,6 +31,7 @@ function App() {
             <Route path="ExistingEvents" element={<ExistingEvents />} />
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             <Route path="Dashboard" element={<Dashboard />} />
+            <Route path="UserAuth" element={<UserAuth />} />
             <Route path="*" element={<Notfound />} />
           </Route>
           <Route path="*" element={<Notfound />} />

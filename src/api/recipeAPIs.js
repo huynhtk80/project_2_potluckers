@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const URI = "http://localhost:5000";
+const URI = "http://localhost:4000";
 
 export const complexSearchGet = async (searchCriteria) => {
   const response = await fetch(`${URI}/complexSearch`, {

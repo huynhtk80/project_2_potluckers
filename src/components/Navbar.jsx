@@ -3,7 +3,7 @@ import "./navigation.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-  let [loginStatus, setLoginStatus] = useState(false);
+  let [loginStatus, setLoginStatus] = useState(true);
 
   return (
     <>
@@ -14,7 +14,7 @@ function Navbar() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/Dashboard">Log In/Sign Up</Link>
+                  <Link to="/home/UserAuth">Log In/Sign Up</Link>
                 </li>
               </ul>
             </nav>
@@ -50,8 +50,8 @@ function Navbar() {
             </ul>
           </nav>
         </header>
+        <Outlet />
       </div>
-      <Outlet />
     </>
   );
 }
