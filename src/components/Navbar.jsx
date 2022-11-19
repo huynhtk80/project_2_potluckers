@@ -29,7 +29,9 @@ function Navbar() {
           <nav>
             <ul>
               <li>
-                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/home" end>
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/home/PlanYourOwnEvent">
@@ -50,6 +52,8 @@ function Navbar() {
             </ul>
           </nav>
         </header>
+      </div>
+      <div className="movedown">
         <Outlet />
       </div>
     </>

@@ -1,5 +1,7 @@
 .searchbox {
-  color: red;
+  border: solid 1px black;
+  padding: 4px;
+  margin-bottom: 20px;
 }
 
 .formContainer {

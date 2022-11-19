@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Navbar from "./components/Navbar";
 import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
