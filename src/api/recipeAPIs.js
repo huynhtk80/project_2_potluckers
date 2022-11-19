@@ -1,13 +1,11 @@
-import fetch from "node-fetch";
-
-const URI = "http://localhost:4000";
+import axios from "axios";
 
 export const complexSearchGet = async (searchCriteria) => {
-  const response = await fetch(`${URI}/complexSearch`, {
+  console.log(searchCriteria);
+  const response = await axios({
     method: "get",
-    body: JSON.stringify(searchCriteria),
-    headers: { "Content-Type": "application/json" },
+    url: `/recipes/complexSearch?query=${searchCriteria.value}`,
   });
-  const recipes = await response.text();
+  const recipes = await response.data;
   return recipes;
 };
