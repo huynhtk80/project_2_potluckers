@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Notfound from "./pages/Notfound";
 import UserAuth from "./pages/UserAuth";
+import FullRecipe from "./components/FullRecipe";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             <Route path="Dashboard" element={<Dashboard />} />
             <Route path="UserAuth" element={<UserAuth />} />
+            <Route path="fullrecipe/" element={<FullRecipe />} />
+
             <Route path="*" element={<Notfound />} />
           </Route>
           <Route path="*" element={<Notfound />} />

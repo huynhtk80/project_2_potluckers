@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { useForm } from "react-hook-form";
 import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
+import RecipeSearchCard from "./RecipeSearchCard";
 
 function RecipeSearch() {
   const [selectedIntolerances, setSelectedIntolerances] = useState(null);
@@ -33,7 +33,7 @@ function RecipeSearch() {
           isMulti={true}
           onChange={setSelectedCuisines}
         />
-        <label>Query String</label>
+        <label>Search Recipe: </label>
         <input
           name="inputtext"
           type="text"
@@ -41,25 +41,17 @@ function RecipeSearch() {
             setQueryString({ name: e.target.name, value: e.target.value })
           }
         />
-        <input
-          name="info"
-          type="checkbox"
-          onChange={(e) =>
-            setQueryString({ name: e.target.name, value: e.target.value })
-          }
-        />
         <button>submit</button>
       </form>
+
       <h2>Search Results</h2>
-      {results && [
-        results.map((r, index) => {
-          return (
-            <p>
-              {index + 1} Title: {r.title}
-            </p>
-          );
-        }),
-      ]}
+      <div className="cardContainer">
+        {results && [
+          results.map((r) => {
+            return <RecipeSearchCard key={r.id} recipe={r} />;
+          }),
+        ]}
+      </div>
     </div>
   );
 }

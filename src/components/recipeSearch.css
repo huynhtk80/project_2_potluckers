@@ -8,3 +8,18 @@
   padding-left: auto;
   padding-right: auto;
 }
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  margin-bottom: -20px;
+}
+.cardContainer > * {
+  margin-bottom: 20px;
+}
+
+.cardText {
+  font-size: 12px;
+}
