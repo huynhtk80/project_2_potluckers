@@ -23,7 +23,7 @@ function Navbar() {
         <header id="nav-header">
           <h1>
             <NavLink to="/home" id="nav-logo">
-              LOGO
+              POTLUCKER
             </NavLink>
           </h1>
           <nav>
@@ -40,7 +40,7 @@ function Navbar() {
               </li>
               <li>
                 <NavLink to="/home/MealPlanningRecipes">
-                  Meal Planning/Recipes
+                  Find New Recipes
                 </NavLink>
               </li>
               <li>
