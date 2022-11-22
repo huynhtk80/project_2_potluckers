@@ -9,3 +9,12 @@ export const complexSearchGet = async (searchCriteria) => {
   const recipes = await response.data;
   return recipes;
 };
+
+export const randomRecipeGet = async () => {
+  const response = await axios({
+    method: "get",
+    url: `/recipes/randomRecipe`,
+  });
+  const recipes = await response.data;
+  return recipes;
+};

@@ -4,6 +4,7 @@ import RecipeSearchCard from "./RecipeSearchCard";
 
 function FullRecipe() {
   const recipe = useLocation().state.value;
+  const cleanSummary = recipe.summary.split("All things considered")[0];
   console.log(recipe);
   return (
     <>
@@ -11,6 +12,8 @@ function FullRecipe() {
       <p>{recipe.id}</p>
       <img src={recipe.image} alt="Recipe Photo"></img>
       <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
+
+      <p dangerouslySetInnerHTML={{ __html: cleanSummary }}></p>
       {recipe.analyzedInstructions[0].steps.map((instructions, index) => (
         <p>
           {index + 1}. {instructions.step}

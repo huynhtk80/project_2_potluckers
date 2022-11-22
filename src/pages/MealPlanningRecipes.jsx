@@ -6,13 +6,10 @@ function MealPlanningRecipes() {
     <div id="SuperWrap">
       <div className="container">
         <div className="one">
-          <h3 className="title flex-title">
-            <span className="title-main">
-              <h1>Meal Planning and Recipes</h1>
-            </span>
-
-            <RecipeSearch />
-          </h3>
+          <div className="title-main">
+            <h1>Find New Recipes</h1>
+          </div>
+          <RecipeSearch />
         </div>
       </div>
     </div>

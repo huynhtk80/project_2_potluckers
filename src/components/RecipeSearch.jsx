@@ -19,21 +19,8 @@ function RecipeSearch() {
 
   return (
     <div className="formContainer">
-      <h2>recipeSearch</h2>
       <form className="searchbox" onSubmit={handleSubmit}>
-        <label>Intolerances: </label>
-        <Select
-          options={INTOLERANCES}
-          isMulti={true}
-          onChange={setSelectedIntolerances}
-        />
-        <label>Cuisines: </label>
-        <Select
-          options={CUISINES}
-          isMulti={true}
-          onChange={setSelectedCuisines}
-        />
-        <label>Search Recipe: </label>
+        <label>Search: </label>
         <input
           name="inputtext"
           type="text"
@@ -41,10 +28,26 @@ function RecipeSearch() {
             setQueryString({ name: e.target.name, value: e.target.value })
           }
         />
+        {/* <div>
+          <label>Intolerances: </label>
+          <Select
+            options={INTOLERANCES}
+            isMulti={true}
+            onChange={setSelectedIntolerances}
+          />
+        </div> */}
+        {/* <div>
+          <label>Cuisines: </label>
+          <Select
+            options={CUISINES}
+            isMulti={true}
+            onChange={setSelectedCuisines}
+          />
+        </div> */}
         <button>submit</button>
       </form>
 
-      <h2>Search Results</h2>
+      {results && <h2>Search Results</h2>}
       <div className="cardContainer">
         {results && [
           results.map((r) => {
