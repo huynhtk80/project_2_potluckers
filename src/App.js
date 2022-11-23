@@ -27,7 +27,8 @@ function App() {
               path="MealPlanningRecipes"
               element={<MealPlanningRecipes />}
             />
-            <Route path="ExistingEvents" element={<ExistingEvents />} />
+            <Route path="ExistingEvents/" element={<ExistingEvents />} />
+            <Route path="ExistingEvents/:id" element={<ExistingEvents />} />
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             <Route path="Dashboard" element={<Dashboard />} />
             <Route path="UserAuth" element={<UserAuth />} />

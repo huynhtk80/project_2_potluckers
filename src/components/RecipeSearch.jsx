@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Box from "@mui/material/Box";
 import Select from "react-select";
 import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
@@ -48,13 +49,19 @@ function RecipeSearch() {
       </form>
 
       {results && <h2>Search Results</h2>}
-      <div className="cardContainer">
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
         {results && [
           results.map((r) => {
             return <RecipeSearchCard key={r.id} recipe={r} />;
           }),
         ]}
-      </div>
+      </Box>
     </div>
   );
 }
