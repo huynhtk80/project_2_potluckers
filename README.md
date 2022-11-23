@@ -1,5 +1,5 @@
 <h1 align="center">
-Potlockers
+Potlucker
 </h1>
 
 ## Table of Contents
