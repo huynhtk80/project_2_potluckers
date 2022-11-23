@@ -1,5 +1,5 @@
 <h1 align="center">
-Potluckers
+Potlucker
 </h1>
 
 ## Table of Contents
