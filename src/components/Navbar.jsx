@@ -3,13 +3,13 @@ import "./navigation.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-  let [loginStatus, setLoginStatus] = useState(true);
+  let [loginStatus, setLoginStatus] = useState(false);
 
   return (
     <>
       <div id="header-background">
         {/* login test hide test: https://reactjs.org/docs/conditional-rendering.html*/}
-        {loginStatus && (
+        {!loginStatus && (
           <header>
             <nav>
               <ul>
