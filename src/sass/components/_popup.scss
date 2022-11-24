@@ -51,6 +51,7 @@
         display: table-cell;
         font-size: 1.4rem;
         margin-bottom: 4rem;
+        padding-bottom: 2.5rem;
 
         -moz-column-count: 2;
         -moz-column-gap: 4rem; //1em = 14px;
@@ -134,6 +135,7 @@
             &__left {
                 width: 33.333333%;
                 display: table-cell;
+                background-color: $color-primary;
             }
         
             &__right {
@@ -173,30 +175,13 @@
                 -webkit-hyphens: auto;
                 hyphens: auto;
             }
-
-            /*&__text {
-                font-size: 1.4rem;
-                margin-bottom: 1.3rem;// was 4rem
-        
-                -moz-column-count: 1;
-                -moz-column-gap: 1.3rem;// was 4rem//1em = 14px;
-                -moz-column-rule: 1px solid $color-grey-light-2;
-        
-                column-count: 1;
-                column-gap: 1.3rem; //was 4rm //1em = 14px;
-                column-rule: 1px solid $color-grey-light-2;
-        
-                -moz-hyphens: auto;
-                -ms-hyphens: auto;
-                -webkit-hyphens: auto;
-                hyphens: auto;
-            }*/
         
             //Open states
             &:target {
                 opacity: 1;
                 visibility: visible;
             }
+        
         
             &:target &__content {
                 opacity: 1;
@@ -210,8 +195,8 @@
                     color: $color-grey-dark;
                     position: absolute;
                     top: .8rem;//was 2.5rem
-                    right: .8rem;
-                    font-size: 1rem;
+                    right: .9rem;
+                    font-size: 3rem;
                     text-decoration: none;
                     display: inline-block;
                     transition: all .2s;

@@ -17,6 +17,7 @@ import rCheseCake from "../img/potlucker-raspberry-cheese-cake.jpg";
 import tProgress from "../img/potlucker-track-progress.jpg";
 import kInformed from "../img/potlucker-keeps-informed.jpg";
 import pMenu from "../img/potlucker-perfect-menus.jpg";
+import tProfile from "../img/tyler-sartison.jpg";
 
 function Landing() {
   const [checked, setChecked] = useState(false);
@@ -556,7 +557,7 @@ function Landing() {
                 className="story__img"
               />
               <figcaption className="story__caption">
-                Romell Bermundo
+                Scrum Master
               </figcaption>
             </figure>
             <div className="story__text">
@@ -587,7 +588,7 @@ function Landing() {
                 alt="Person on a tour"
                 className="story__img"
               />
-              <figcaption className="story__caption">Timothy Huynh</figcaption>
+              <figcaption className="story__caption">Full Stack</figcaption>
             </figure>
             <div className="story__text">
               <h3 className="heading-tertiary u-margin-bottom-small">
@@ -613,28 +614,22 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={rProfile}
+                src={tProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
-              <figcaption className="story__caption">Tyler Sartison</figcaption>
+              <figcaption className="story__caption">Front End</figcaption>
             </figure>
             <div className="story__text">
               <h3 className="heading-tertiary u-margin-bottom-small">
-                I had the best time ever!
+                The Best Group I've ever worked with.
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
+                <h1>Tyler Sartison</h1> This was a fun project to work on because of the great people. I learned a lot during the process and had fun along the way. What more could I have asked for? Throughout the duration my focus was on the front end of the Potlucker website. I used HTML 5, CSS, SCSS, JavaScrit, Node, Terminal, GitHub, Iconfont and VsCode. Please view my full bio at LinkedIn.
               </p>
             </div>
-            <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
-                Full Bio
-              </a>
+             <div class="u-center-text u-margin-top-huge">
+                <a href="https://www.linkedin.com/in/tyler-sartison-3030172a/ " target="_blank" class="btn btn--green">Full Bio</a>
             </div>
           </div>
         </div>
