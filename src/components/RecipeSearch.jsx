@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Select from "react-select";
 import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
