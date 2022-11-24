@@ -6,7 +6,6 @@ import MealPlanningRecipes from "./pages/MealPlanningRecipes";
 import ExistingEvents from "./pages/ExistingEvents";
 import PlanYourOwnEvent from "./pages/PlanYourOwnEvent";
 
-import "./styles.css";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Notfound from "./pages/Notfound";
