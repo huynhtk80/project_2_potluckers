@@ -36,10 +36,12 @@ header li {
   padding: 0 20px;
 }
 
+/* Dashboard Menu Text */
 header a {
   text-decoration: none;
   color: rgb(7, 7, 7);
   transition: all 0.3s ease 0s;
+  font-size: 1em;
 }
 
 header a:hover {
@@ -83,6 +85,7 @@ header a:hover {
   margin: 0 auto;
 }
 
+/* Dashboard Nav Bar */
 #nav-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,6 +99,7 @@ header a:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #bad5e2;
 }
 
 #nav-logo {
