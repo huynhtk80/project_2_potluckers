@@ -8,6 +8,15 @@ import "../sass/main.scss";
 import codeVideo from "../img/code.mp4";
 import kProfile from "../img/nat-8.jpg";
 import rProfile from "../img/nat-9.jpg";
+import kWings from "../img/potlucker-kamikaze-wings.jpg";
+import kbulgogi from "../img/potlucker-korean-beef-bulgogi.jpg";
+import mPizza from "../img/potlucker-margherita-pizza.jpg";
+import cCake from "../img/potlucker-chocolate-cake.jpg";
+import cCookie from "../img/potlucker-chocolate-chip-cookies.jpg";
+import rCheseCake from "../img/potlucker-raspberry-cheese-cake.jpg";
+import tProgress from "../img/potlucker-track-progress.jpg";
+import kInformed from "../img/potlucker-keeps-informed.jpg";
+import pMenu from "../img/potlucker-perfect-menus.jpg";
 
 function Landing() {
   const [checked, setChecked] = useState(false);
@@ -765,11 +774,7 @@ function Landing() {
       <div className="popup" id="popup">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-kamikaze-wings.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={kWings} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -807,11 +812,7 @@ function Landing() {
       <div className="popup" id="popup2">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-korean-beef-bulgogi.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={kbulgogi} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -849,11 +850,7 @@ function Landing() {
       <div className="popup" id="popup3">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-margherita-pizza.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={mPizza} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -891,11 +888,7 @@ function Landing() {
       <div className="popup" id="popup4">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-chocolate-cake.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={cCake} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -933,11 +926,7 @@ function Landing() {
       <div className="popup" id="popup5">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-chocolate-chip-cookies.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={cCookie} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -976,11 +965,7 @@ function Landing() {
       <div className="popup" id="popup6">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-raspberry-cheese-cake.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={rCheseCake} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -1018,11 +1003,7 @@ function Landing() {
       <div className="popup" id="popup7">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-track-progress.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={tProgress} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -1060,11 +1041,7 @@ function Landing() {
       <div className="popup" id="popup8">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-keeps-informed.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={kInformed} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
@@ -1103,11 +1080,7 @@ function Landing() {
       <div className="popup" id="popup9">
         <div className="popup__content">
           <div className="popup__left">
-            <img
-              src="../img/potlucker-perfect-menus.jpg"
-              alt="Tour photo"
-              className="popup__img"
-            />
+            <img src={pMenu} alt="Tour photo" className="popup__img" />
           </div>
           <div className="popup__right">
             <a href="#section-tours" className="popup__close">
