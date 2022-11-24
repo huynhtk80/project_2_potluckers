@@ -6,7 +6,7 @@ import MealPlanningRecipes from "./pages/MealPlanningRecipes";
 import ExistingEvents from "./pages/ExistingEvents";
 import PlanYourOwnEvent from "./pages/PlanYourOwnEvent";
 
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Notfound from "./pages/Notfound";
 import FullRecipe from "./components/FullRecipe";
@@ -33,7 +33,7 @@ function App() {
             <Route path="ExistingEvents/" element={<ExistingEvents />} />
             <Route path="ExistingEvents/:id" element={<ExistingEvents />} />
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
-            <Route path="Dashboard" element={<Dashboard />} />
+            {/* <Route path="Dashboard" element={<Dashboard />} /> */}
             <Route path="fullrecipe/" element={<FullRecipe />} />
 
             <Route path="*" element={<Notfound />} />

@@ -10,7 +10,7 @@ function Index() {
               <h1>HOME PAGE</h1>
             </span>
             <p>
-              hjfasdkjhLorem ipsum dolor sit amet, consectetur adipiscing elit,
+              Dashboard Homepage -Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Gravida cum sociis natoque penatibus et. Velit laoreet id donec
               ultrices tincidunt arcu non. Ut etiam sit amet nisl purus.
