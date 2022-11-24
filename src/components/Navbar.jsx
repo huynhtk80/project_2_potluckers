@@ -14,7 +14,7 @@ function Navbar() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/home/UserAuth">Log In/Sign Up</Link>
+                  <Link to="/sign-up">Log In/Sign Up</Link>
                 </li>
               </ul>
             </nav>

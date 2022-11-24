@@ -9,8 +9,10 @@ import PlanYourOwnEvent from "./pages/PlanYourOwnEvent";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Notfound from "./pages/Notfound";
-import UserAuth from "./pages/UserAuth";
 import FullRecipe from "./components/FullRecipe";
+import Login from "./pages/Login_component";
+import SignUp from "./pages/Signup_component";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-
+          <Route path="/sign-in" element={<Login />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/userDetails" element={<UserDetails />} />
           <Route path="/home" element={<Navbar />}>
             <Route index element={<Index />} />
             <Route path="Aboutus" element={<Aboutus />} />
@@ -30,7 +34,6 @@ function App() {
             <Route path="ExistingEvents/:id" element={<ExistingEvents />} />
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             <Route path="Dashboard" element={<Dashboard />} />
-            <Route path="UserAuth" element={<UserAuth />} />
             <Route path="fullrecipe/" element={<FullRecipe />} />
 
             <Route path="*" element={<Notfound />} />
