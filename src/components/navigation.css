@@ -48,7 +48,7 @@ header a:hover {
   color: #eb710d;
 }
 .active {
-  color: #bad5e2;
+  color: #ade083;
 }
 
 /* DESKTOP MENU */
@@ -99,7 +99,7 @@ header a:hover {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #bad5e2;
+  background-color: #77b743;
 }
 
 #nav-logo {
