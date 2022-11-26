@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 
 /* Header */
 #header-background {
@@ -23,7 +25,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px 50px;
+  padding: 0px 50px;
   box-shadow: 0 1px 8px rgb(122, 209, 109);
 }
 
@@ -32,22 +34,30 @@ header {
   font-size: 1.5em;
 }
 
+header ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin:0;
+}
+
 header li {
   list-style: none;
-  display: inline-block;
-  padding: 0 20px;
 }
 
 /* Dashboard Menu Text */
 header a {
   text-decoration: none;
-  color: rgb(7, 7, 7);
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease 0s;
   font-size: 14px;
+  padding: 1.5rem;
+  display: block;
 }
 
 header a:hover {
-  color: #0debeb;
+  /* color: #0debeb; */
+  background-color: #259825;
 }
 
 .active {
@@ -109,13 +119,14 @@ header a:hover {
 }
 
 #nav-logo {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 #nav-logo:hover {
-  color: #655;
+  /* color: rgb(250, 241, 199); */
+  background-color: #77b743;
 }
 
 .nav-ul {
