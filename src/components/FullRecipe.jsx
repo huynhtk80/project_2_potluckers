@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
-import RecipeSearchCard from "./RecipeSearchCard";
 
 function FullRecipe() {
   const recipe = useLocation().state.value;

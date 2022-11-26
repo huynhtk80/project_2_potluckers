@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import theImage from "../img/potlucker-chocolate-cake.jpg";
 import "./recipecard.css";
 import { Link } from "react-router-dom";
+import PopupRecipe from "./PopupRecipe";
 
 function RecipeCard({ recipe }) {
+  const [buttonPopup, setButtonPopup] = useState(false);
+
   return (
-    <div style={{ width: "310px", marginBottom: "20px" }}>
-      <div className="cardR">
+    <>
+      <div style={{ width: "310px", marginBottom: "20px" }} className="cardR">
         <div className="cardR__side cardR__side--front">
           <div
             className="cardR__picture"
@@ -39,10 +42,19 @@ function RecipeCard({ recipe }) {
             >
               Learn More
             </Link>
+            <a onClick={() => setButtonPopup(true)} className="btn btn--white">
+              Learn More
+            </a>
           </div>
         </div>
       </div>
-    </div>
+
+      <PopupRecipe
+        trigger={buttonPopup}
+        setTrigger={setButtonPopup}
+        recipe={recipe}
+      />
+    </>
   );
 }
 

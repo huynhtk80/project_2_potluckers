@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
 import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
-import RecipeSearchCard from "./RecipeSearchCard";
 import RecipeCard from "./RecipeCard";
 
 function RecipeSearch() {
