@@ -13,8 +13,6 @@ function ExistingEvents() {
     const fetchPotluck = async () => {
       const fetchedPotluck = await getexistingPotluck(id);
       setPotluck(fetchedPotluck);
-      console.log("potluck fetch returned:", fetchedPotluck);
-      console.log("Potluck Main", potluck.main);
     };
     fetchPotluck();
 
@@ -33,13 +31,18 @@ function ExistingEvents() {
         <div className="one">
           <h3 className="title flex-title">
             <span className="title-main">
-              <h1>Existing Events</h1>
+              <h1 className="romell">Existing Events</h1>
             </span>
 
-            <FullFeaturedCrudGrid dishes={potluck.main} type="Mains" />
             <FullFeaturedCrudGrid
-              dishes={potluck.appetizer}
-              type="Appetizers"
+              setPotluck={setPotluck}
+              potluck={potluck}
+              type="main"
+            />
+            <FullFeaturedCrudGrid
+              setPotluck={setPotluck}
+              potluck={potluck}
+              type="appetizer"
             />
             <EditDataTable />
           </h3>

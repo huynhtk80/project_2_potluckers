@@ -21,10 +21,7 @@ export const getexistingPotluck = async (potluckId) => {
 };
 
 export const updateExistingPotluck = async (potluck) => {
-  const response = await axios({
-    method: "put",
-    url: `/potluck/`,
-  });
+  const response = await axios.put(`/potluck/`, potluck);
   const updatedPotluck = await response.data;
   return updatedPotluck;
 };

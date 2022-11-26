@@ -14,44 +14,7 @@ import {
   GridToolbarContainer,
   GridActionsCellItem,
 } from "@mui/x-data-grid";
-
-const initialRows = [
-  {
-    id: 1,
-    name: "john",
-    age: 25,
-    dateCreated: Date.now(),
-    lastLogin: Date.now(),
-  },
-  {
-    id: 2,
-    name: "john",
-    age: 36,
-    dateCreated: Date.now(),
-    lastLogin: Date.now(),
-  },
-  {
-    id: 3,
-    name: "john",
-    age: 19,
-    dateCreated: Date.now(),
-    lastLogin: Date.now(),
-  },
-  {
-    id: 4,
-    name: "john",
-    age: 28,
-    dateCreated: Date.now(),
-    lastLogin: Date.now(),
-  },
-  {
-    id: 5,
-    name: "john",
-    age: 23,
-    dateCreated: Date.now(),
-    lastLogin: Date.now(),
-  },
-];
+import { updateExistingPotluck } from "../api/potluckAPI";
 
 // add new
 function EditToolbar(props) {
@@ -62,7 +25,14 @@ function EditToolbar(props) {
     console.log(_id);
     setRows((oldRows) => [
       ...oldRows,
-      { _id: _id, id: _id, name: "test", age: "", isNew: true },
+      {
+        _id: _id,
+        id: _id,
+        item: "test",
+        responsible: "",
+        notes: "",
+        isNew: true,
+      },
     ]);
     setRowModesModel((oldModel) => ({
       ...oldModel,
@@ -85,9 +55,28 @@ EditToolbar.propTypes = {
   setRows: PropTypes.func.isRequired,
 };
 
-export default function FullFeaturedCrudGrid({ dishes, type }) {
-  const [rows, setRows] = React.useState(dishes);
+export default function FullFeaturedCrudGrid({
+  setPotluck,
+  potluck,
+  dishes,
+  type,
+}) {
+  const [rows, setRows] = React.useState(potluck[type]);
   const [rowModesModel, setRowModesModel] = React.useState({});
+  console.log("top rows", rows);
+
+  React.useEffect(() => {
+    const oldPotluck = potluck;
+    console.log("the Old: ", oldPotluck);
+    console.log("the new rows: ", rows);
+    oldPotluck[type] = rows;
+    console.log("the maybe updatded: ", oldPotluck);
+
+    setPotluck(oldPotluck);
+    updateExistingPotluck(potluck);
+
+    return () => {};
+  }, [rows]);
 
   const handleRowEditStart = (params, event) => {
     event.defaultMuiPrevented = true;
@@ -106,9 +95,12 @@ export default function FullFeaturedCrudGrid({ dishes, type }) {
 
   const handleSaveClick = (id) => () => {
     console.log(id);
-    console.log(rowModesModel);
+    console.log("current row mode: ", rowModesModel);
+    console.log("Current Row:", rows);
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
     console.log(rowModesModel);
+    console.log("Current Potluck:", potluck);
+    console.log("Current Row:", rows);
   };
 
   const handleDeleteClick = (id) => () => {
@@ -129,26 +121,27 @@ export default function FullFeaturedCrudGrid({ dishes, type }) {
 
   const processRowUpdate = (newRow) => {
     const updatedRow = { ...newRow, isNew: false };
-    console.log(updatedRow);
-    setRows(rows.map((row) => (row.id === newRow.id ? updatedRow : row)));
+    setRows(rows.map((row) => (row._id === newRow._id ? updatedRow : row)));
+
     return updatedRow;
   };
 
   const columns = [
-    { field: "item", headerName: "Item", width: 180, editable: true },
-    { field: "_id", headerName: "Id", width: 225, editable: true },
-    { field: "id", headerName: "MuiId", width: 225, editable: true },
+    { field: "item", headerName: "Item", flex: 0.5, editable: true },
+
     {
       field: "responsible",
       headerName: "responsible",
+      flex: 0.5,
       type: "string",
       editable: true,
+      resizable: true,
     },
     {
       field: "notes",
       headerName: "notes",
       type: "string",
-      width: 180,
+      flex: 1,
       editable: true,
     },
     {
@@ -199,8 +192,7 @@ export default function FullFeaturedCrudGrid({ dishes, type }) {
   return (
     <Box
       sx={{
-        height: 600,
-        width: "100%",
+        width: "90%",
         "& .actions": {
           color: "text.secondary",
         },
@@ -210,10 +202,10 @@ export default function FullFeaturedCrudGrid({ dishes, type }) {
       }}
     >
       <DataGrid
+        autoHeight={true}
         rows={rows}
         columns={columns}
         editMode="row"
-        getRowId={(row) => row._id}
         rowModesModel={rowModesModel}
         onRowModesModelChange={(newModel) => setRowModesModel(newModel)}
         onRowEditStart={handleRowEditStart}
