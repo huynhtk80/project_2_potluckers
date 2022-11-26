@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
+import kProfile from "../img/nat-8.jpg";
+
 
 function Aboutus() {
   return (
-      <div className="container">
-            <span className="title-main">
-              <h1>About Us</h1>
-            </span>
+    <div className="aboutus-container">
+      <div className="aboutus-main">
+        <span className="title-main"><h1>About Us</h1></span>
             <p>
               About Potlockers Organizing potlucks is hard. You need to know
               allergies, preferences, cutlery, clean-up crew and much more. Life
@@ -39,7 +40,12 @@ function Aboutus() {
               <Link to="/home/PlanYourOwnEvent">Plan Your Own Event</Link>
             </p>
       </div>
+      <div className="aboutus-sidebar">
+      <img src={kProfile} alt="Person on a tour" width={500} height={500} style={{objectFit:"cover"}}/>
+      </div>
+    </div>
   );
 }
 
 export default Aboutus;
+
