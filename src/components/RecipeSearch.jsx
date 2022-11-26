@@ -4,6 +4,7 @@ import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
 import RecipeSearchCard from "./RecipeSearchCard";
+import RecipeCard from "./RecipeCard";
 
 function RecipeSearch() {
   const [selectedIntolerances, setSelectedIntolerances] = useState(null);
@@ -48,19 +49,14 @@ function RecipeSearch() {
       </form>
 
       {results && <h2>Search Results</h2>}
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className="cardContainer">
         {results && [
           results.map((r) => {
-            return <RecipeSearchCard key={r.id} recipe={r} />;
+            // return <RecipeSearchCard key={r.id} recipe={r} />;
+            return <RecipeCard key={r.id} recipe={r} />;
           }),
         ]}
-      </Box>
+      </div>
     </div>
   );
 }
