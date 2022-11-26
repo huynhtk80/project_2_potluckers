@@ -2,10 +2,7 @@ import React from "react";
 
 function Index() {
   return (
-    <div id="SuperWrap">
       <div className="container">
-        <div className="one">
-          <h3 className="title flex-title">
             <span className="title-main">
               <h1>HOME PAGE</h1>
             </span>
@@ -71,10 +68,7 @@ function Index() {
               consequat interdum varius. Viverra justo nec ultrices dui. Elit
               sed vulputate mi sit amet. Sed sed risus pretium.
             </p>
-          </h3>
-        </div>
       </div>
-    </div>
   );
 }
 

@@ -4,14 +4,11 @@ import "./dashboard.css";
 
 function Aboutus() {
   return (
-    <div id="SuperWrap">
-      <div className="container2">
-        <div className="one">
-          <h3 className="title flex-title">
+      <div className="container">
             <span className="title-main">
-              <h1 className="romell">About Us</h1>
+              <h1>About Us</h1>
             </span>
-            <p className="romell">
+            <p>
               About Potlockers Organizing potlucks is hard. You need to know
               allergies, preferences, cutlery, clean-up crew and much more. Life
               is already hard but organizing potlock doesn’t have to be. What if
@@ -41,10 +38,7 @@ function Aboutus() {
             <p>
               <Link to="/home/PlanYourOwnEvent">Plan Your Own Event</Link>
             </p>
-          </h3>
-        </div>
       </div>
-    </div>
   );
 }
 
