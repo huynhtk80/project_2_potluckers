@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./aboutus.css";
+import "./dashboard.css";
 
 function Aboutus() {
   return (

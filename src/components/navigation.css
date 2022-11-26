@@ -1,3 +1,5 @@
+
+
 /* Header */
 #header-background {
   background-color: white;
@@ -22,7 +24,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 20px 50px;
-  box-shadow: 0 1px 8px #ddd;
+  box-shadow: 0 1px 8px rgb(122, 209, 109);
 }
 
 #nav-title {
@@ -41,12 +43,13 @@ header a {
   text-decoration: none;
   color: rgb(7, 7, 7);
   transition: all 0.3s ease 0s;
-  font-size: 1em;
+  font-size: 14px;
 }
 
 header a:hover {
-  color: #eb710d;
+  color: #0debeb;
 }
+
 .active {
   color: #ade083;
 }
@@ -100,11 +103,15 @@ header a:hover {
   -ms-flex-align: center;
   align-items: center;
   background-color: #77b743;
+  border-left-style: solid;
+  border-color: green;
+  border-width: 12px;
 }
 
 #nav-logo {
   color: black;
   text-decoration: none;
+  font-size: 30px;
 }
 
 #nav-logo:hover {
@@ -262,7 +269,7 @@ header a:hover {
 }
 
 #slnav-logo:hover {
-  color: #655;
+  color: #21ff3b;
 }
 
 .slnav-ul {
