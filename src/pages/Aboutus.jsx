@@ -1,18 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
-import kProfile from "../img/nat-8.jpg";
 
+import kProfile from "../img/nat-8.jpg";
+import hstew from "../img/potlucker-header-stew.jpg";
 
 function Aboutus() {
   return (
     <div className="aboutus-container">
       <div className="aboutus-main">
-        <span className="title-main"><h1>About Us</h1></span>
+        <span className="title-main"><h1>Potluck made easy</h1></span>
+            <br />
             <p>
-              About Potlockers Organizing potlucks is hard. You need to know
+            <i>One cannot think well, love well, sleep well, if one has not dined well.</i> - Virginia Woolf
+            </p>
+            <br />
+            <p>
+              Organizing potlucks is can be challenging. You need to know
               allergies, preferences, cutlery, clean-up crew and much more. Life
-              is already hard but organizing potlock doesn’t have to be. What if
+              is already hard but organizing potlock does not have to be. What if
               we tell you that there is an app to make your life easier? Well,
               we present to you the Potlockers app. This application is made by
               the Kamikaze Cheese Team and our goal is to make organizing
@@ -41,7 +47,7 @@ function Aboutus() {
             </p>
       </div>
       <div className="aboutus-sidebar">
-      <img src={kProfile} alt="Person on a tour" width={500} height={500} style={{objectFit:"cover"}}/>
+      <img src={hstew} alt="Stew" width={600} height={700} style={{objectFit:"cover"}}/>
       </div>
     </div>
   );
