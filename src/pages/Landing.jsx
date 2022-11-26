@@ -556,9 +556,7 @@ function Landing() {
                 alt="Person on a tour"
                 className="story__img"
               />
-              <figcaption className="story__caption">
-                Scrum Master
-              </figcaption>
+              <figcaption className="story__caption">Scrum Master</figcaption>
             </figure>
             <div className="story__text">
               <h3 className="heading-tertiary u-margin-bottom-small">
@@ -625,11 +623,23 @@ function Landing() {
                 The Best Group I've ever worked with.
               </h3>
               <p>
-                <h1>Tyler Sartison</h1> This was a fun project to work on because of the great people. I learned a lot during the process and had fun along the way. What more could I have asked for? Throughout the duration my focus was on the front end of the Potlucker website. I used HTML 5, CSS, SCSS, JavaScrit, Node, Terminal, GitHub, Iconfont and VsCode. Please view my full bio at LinkedIn.
+                <h1>Tyler Sartison</h1> This was a fun project to work on
+                because of the great people. I learned a lot during the process
+                and had fun along the way. What more could I have asked for?
+                Throughout the duration my focus was on the front end of the
+                Potlucker website. I used HTML 5, CSS, SCSS, JavaScrit, Node,
+                Terminal, GitHub, Iconfont and VsCode. Please view my full bio
+                at LinkedIn.
               </p>
             </div>
-             <div class="u-center-text u-margin-top-huge">
-                <a href="https://www.linkedin.com/in/tyler-sartison-3030172a/ " target="_blank" class="btn btn--green">Full Bio</a>
+            <div class="u-center-text u-margin-top-huge">
+              <a
+                href="https://www.linkedin.com/in/tyler-sartison-3030172a/ "
+                target="_blank"
+                class="btn btn--green"
+              >
+                Full Bio
+              </a>
             </div>
           </div>
         </div>
