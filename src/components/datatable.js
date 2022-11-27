@@ -28,7 +28,7 @@ function EditToolbar(props) {
       {
         _id: _id,
         id: _id,
-        item: "test",
+        item: "Your Choice",
         responsible: "",
         notes: "",
         isNew: true,
@@ -127,11 +127,18 @@ export default function FullFeaturedCrudGrid({
   };
 
   const columns = [
-    { field: "item", headerName: "Item", flex: 0.5, editable: true },
-
+    { field: "item", headerName: "Requested Item", flex: 0.5, editable: true },
+    {
+      field: "recipeName",
+      headerName: "Recipe Name",
+      flex: 0.5,
+      type: "string",
+      editable: true,
+      resizable: true,
+    },
     {
       field: "responsible",
-      headerName: "responsible",
+      headerName: "Taken By",
       flex: 0.5,
       type: "string",
       editable: true,

@@ -33,6 +33,11 @@ function ExistingEvents() {
             <span className="title-main">
               <h1 className="romell">Existing Events</h1>
             </span>
+            <h2>{potluck.title}</h2>
+            <p>Organized by: {potluck.owner}</p>
+            <p>Event Date: {Date(potluck.eventDate).toString()}</p>
+            <p>Anticipated Attendees: {potluck.numberExpected}</p>
+            <p>Confirmed Attendees: {potluck.numberAttending}</p>
 
             <FullFeaturedCrudGrid
               setPotluck={setPotluck}
@@ -44,7 +49,11 @@ function ExistingEvents() {
               potluck={potluck}
               type="appetizer"
             />
-            <EditDataTable />
+            <FullFeaturedCrudGrid
+              setPotluck={setPotluck}
+              potluck={potluck}
+              type="dessert"
+            />
           </h3>
         </div>
       </div>
