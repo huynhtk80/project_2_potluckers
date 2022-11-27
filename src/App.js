@@ -13,6 +13,7 @@ import FullRecipe from "./components/FullRecipe";
 import Login from "./pages/Login_component";
 import SignUp from "./pages/Signup_component";
 import UserDetails from "./components/UserDetails";
+import ExistingEventsLanding from "./pages/ExistingEventsLanding";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
               path="MealPlanningRecipes"
               element={<MealPlanningRecipes />}
             />
-            <Route path="ExistingEvents/" element={<ExistingEvents />} />
+            <Route path="ExistingEvents/" element={<ExistingEventsLanding />} />
             <Route path="ExistingEvents/:id" element={<ExistingEvents />} />
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             {/* <Route path="Dashboard" element={<Dashboard />} /> */}
