@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { getexistingPotluck } from "../api/potluckAPI";
 import FullFeaturedCrudGrid from "../components/datatable";
 import EditDataTable from "../components/EditDataTable";
+import ParticipantsPopup from "../components/ParticipantsPopup";
 
 function ExistingEvents() {
   const [potluck, setPotluck] = useState();
+  const [participantPopup, setParticipantPopup] = useState(false);
 
   const { id } = useParams();
 
@@ -26,38 +28,59 @@ function ExistingEvents() {
     return <p>Loading</p>;
   }
   return (
-    <div id="SuperWrap">
-      <div className="container">
-        <div className="one">
-          <h3 className="title flex-title">
-            <span className="title-main">
-              <h1 className="romell">Existing Events</h1>
-            </span>
-            <h2>{potluck.title}</h2>
-            <p>Organized by: {potluck.owner}</p>
-            <p>Event Date: {Date(potluck.eventDate).toString()}</p>
-            <p>Anticipated Attendees: {potluck.numberExpected}</p>
-            <p>Confirmed Attendees: {potluck.numberAttending}</p>
+    <>
+      <div id="SuperWrap">
+        <div className="container">
+          <div className="one">
+            <h3 className="title flex-title">
+              <h2 className="heading-secondary u-margin-bottom-small">
+                {potluck.title}
+              </h2>
 
-            <FullFeaturedCrudGrid
-              setPotluck={setPotluck}
-              potluck={potluck}
-              type="main"
-            />
-            <FullFeaturedCrudGrid
-              setPotluck={setPotluck}
-              potluck={potluck}
-              type="appetizer"
-            />
-            <FullFeaturedCrudGrid
-              setPotluck={setPotluck}
-              potluck={potluck}
-              type="dessert"
-            />
-          </h3>
+              <p>Organized by: {potluck.owner}</p>
+              <p>Event Date: {Date(potluck.eventDate).toString()}</p>
+              <p>
+                <b>Location: </b>
+                {potluck.location.name}
+              </p>
+              <p>{potluck.location.address}</p>
+              <p>
+                {potluck.location.city}, {potluck.location.province}
+              </p>
+              <p>{potluck.location.postalcode}</p>
+              <p>Anticipated Attendees: {potluck.numberExpected}</p>
+              <p>Confirmed Attendees: {potluck.numberAttending}</p>
+              <a
+                onClick={() => setParticipantPopup(true)}
+                className="btn btn--green"
+              >
+                See who's coming!
+              </a>
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="main"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="appetizer"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="dessert"
+              />
+            </h3>
+          </div>
         </div>
       </div>
-    </div>
+      <ParticipantsPopup
+        trigger={participantPopup}
+        setTrigger={setParticipantPopup}
+        potluck={potluck}
+      />
+    </>
   );
 }
 
