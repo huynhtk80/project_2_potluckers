@@ -56,16 +56,15 @@ function PopupRecipe(props) {
                     <p>
                       {index + 1}. {instructions.step}
                     </p>
-                    <br></br>
                   </>
                 )
               )}
             </p>
           </div>
 
-          <div className="popupR__left_bottom">
+          {/* <div className="popupR__left_bottom">
             <h2>Ingredients</h2>
-          </div>
+          </div> */}
           <div className="popupR__bottomlink">
             <Link to="/home" className="btn btn--green">
               Save to Favorites

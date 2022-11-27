@@ -29,20 +29,33 @@ function RecipeCard({ recipe }) {
           </h4>
           <div className="cardR__details">
             <ul>
-              <li>🍽️Servings: {recipe.servings}</li>
-              <li>⏰Ready in: {recipe.readyInMinutes}mins</li>
+              <li>
+                🍽️<b>Servings:</b> {recipe.servings}
+              </li>
+              <li>
+                ⏰<b>Ready in:</b> {recipe.readyInMinutes}mins
+              </li>
+
+              {recipe.cuisines.length > 0 ? (
+                <li>
+                  <b>Cuisines:</b> {recipe.cuisines.join(", ")}
+                </li>
+              ) : (
+                <></>
+              )}
+
+              {recipe.dishTypes.length > 0 ? (
+                <li>
+                  <b>Type:</b> {recipe.dishTypes.join(", ")}
+                </li>
+              ) : (
+                <></>
+              )}
             </ul>
           </div>
         </div>
         <div className="cardR__side cardR__side--back-1">
           <div className="cardR__cta">
-            <Link
-              to={`/home/fullrecipe/`}
-              state={{ value: recipe }}
-              className="btn btn--white"
-            >
-              Learn More
-            </Link>
             <a onClick={() => setButtonPopup(true)} className="btn btn--white">
               Learn More
             </a>

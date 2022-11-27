@@ -25,9 +25,16 @@
   background-color: #fff;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  overflow: scroll;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
   transition: all 0.5s 0.2s;
 }
+.popupR__content::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .popupR__left {
   width: 33%;
   float: left;
