@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../sass/main.scss";
-// import "../css/style.css";
+import "../css/style.css";
 // import "../css/icon-font.css";
 
 import codeVideo from "../img/code.mp4";
@@ -18,6 +18,7 @@ import tProgress from "../img/potlucker-track-progress.jpg";
 import kInformed from "../img/potlucker-keeps-informed.jpg";
 import pMenu from "../img/potlucker-perfect-menus.jpg";
 import tProfile from "../img/tyler-sartison.jpg";
+import logoWhite from "../img/logowhite.png";
 
 function Landing() {
   const [checked, setChecked] = useState(false);
@@ -94,7 +95,7 @@ function Landing() {
       {/* <!--Start Header Section--> */}
       <header className="header">
         <div className="header__logo-box">
-          <img src="#" alt="Logo" className="header__logo" />
+          <img src={logoWhite} alt="Logo" className="header__logo" />
         </div>
 
         <div className="header__text-box">
@@ -103,7 +104,7 @@ function Landing() {
             <span className="heading-primary--sub">Where Awesome Happens</span>
           </h1>
 
-          <Link to="/home" className="btn btn--white btn--animated">
+          <Link to="/home" className="btn btn--white btn--white:hover">
             Sign in / Sign Up
           </Link>
         </div>
@@ -766,10 +767,11 @@ function Landing() {
               <a href="#" className="footer__link">
                 Advanced CSS and Sass
               </a>
-              . Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to
+              . Copyright &copy; by Jonas Schmedtmann. 
+              {/* You are 100% allowed to
               use this webpage for both personal and commercial use, but NOT to
               claim it as your own design. A credit to the original author,
-              Jonas Schmedtmann, is of course highly appreciated!
+              Jonas Schmedtmann, is of course highly appreciated! */}
             </p>
           </div>
         </div>
