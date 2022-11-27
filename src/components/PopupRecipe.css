@@ -124,7 +124,7 @@
     /*overflow: hidden;*/
     /* opacity: 0; */
     /* transform: translate(-50%, -50%) scale(0.25); */
-    transition: all 0.5s 0.2s;
+    /* transition: all 0.5s 0.2s; */
     padding-bottom: 2rem;
   }
   .popupR__left {

@@ -33,9 +33,7 @@ function ExistingEvents() {
         <div className="container">
           <div className="one">
             <h3 className="title flex-title">
-              <h2 className="heading-secondary u-margin-bottom-small">
-                {potluck.title}
-              </h2>
+              <h1>{potluck.title}</h1>
 
               <p>Organized by: {potluck.owner}</p>
               <p>Event Date: {Date(potluck.eventDate).toString()}</p>
