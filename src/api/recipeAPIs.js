@@ -18,3 +18,12 @@ export const randomRecipeGet = async () => {
   const recipes = await response.data;
   return recipes;
 };
+
+export const getRecipeIngredients = async (_id) => {
+  const response = await axios({
+    method: "get",
+    url: `/recipes/ingredients/${_id}`,
+  });
+  const recipes = await response.data;
+  return recipes;
+};
