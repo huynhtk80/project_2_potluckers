@@ -30,7 +30,7 @@ function App() {
           <Route path="/TermsOfUse" element={<TermsOfUse />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/userDetails" element={<UserDetails />} />
-          <Route path="/home" element={<Navbar />}>
+          <Route path="/home" element={<PlayingNavBar />}>
             <Route index element={<Index />} />
             <Route path="Aboutus" element={<Aboutus />} />
             <Route

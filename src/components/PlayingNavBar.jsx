@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./PlayingNavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import longLogo from "../img/logo2.png";
 
 function PlayingNavBar() {
@@ -28,61 +27,72 @@ function PlayingNavBar() {
         <div className="navigationP__background">&nbsp;</div>
 
         <nav className="navigationP__nav">
-          <img src={longLogo} className="logoimage" />
+          <Link to="/home" className="logoimage">
+            <img src={longLogo} className="logoimage" />
+          </Link>
           <ul className="navigationP__list">
             <li className="navigationP__item">
-              <HashLink
-                to="#popular-mains"
+              <NavLink
+                to="/home"
                 className="navigationP__link"
                 onClick={handleChange}
               >
                 Home
-              </HashLink>
+              </NavLink>
             </li>
             <li className="navigationP__item">
-              <HashLink
-                to="#popular-deserts"
+              <NavLink
+                to="/home/PlanYourOwnEvent"
                 className="navigationP__link"
                 onClick={handleChange}
               >
-                Plan Your Own Event
-              </HashLink>
+                Create Event
+              </NavLink>
             </li>
             <li className="navigationP__item">
-              <HashLink
-                to="#learn-about-potlucker"
+              <NavLink
+                to="/home/ExistingEvents"
                 className="navigationP__link"
                 onClick={handleChange}
               >
                 Existing Events
-              </HashLink>
+              </NavLink>
             </li>
             <li className="navigationP__item">
-              <HashLink
-                to="#meet-the-team"
+              <NavLink
+                to="/home/MealPlanningRecipes"
                 className="navigationP__link"
                 onClick={handleChange}
               >
-                Find New Recipes
-              </HashLink>
+                Find Recipes
+              </NavLink>
             </li>
             <li className="navigationP__item">
-              <HashLink
-                to="#refer-someone"
+              <NavLink
+                to="/home/Aboutus"
                 className="navigationP__link"
                 onClick={handleChange}
               >
                 About Us
-              </HashLink>
+              </NavLink>
             </li>
             <li className="navigationP__item">
-              <HashLink
-                to="#refer-someone"
+              <NavLink
+                to="/sign-up"
                 className="navigationP__link"
                 onClick={handleChange}
               >
                 Register/Login
-              </HashLink>
+              </NavLink>
+            </li>
+            <li className="navigationP__item">
+              <NavLink
+                to="/UserDetails"
+                className="navigationP__link"
+                onClick={handleChange}
+              >
+                Settings
+              </NavLink>
             </li>
           </ul>
         </nav>

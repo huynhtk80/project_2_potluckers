@@ -16,7 +16,7 @@
 .navigationP__nav {
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   top: 0;
   left: 0;
   /* z-index: 1500; */
@@ -39,7 +39,7 @@
   height: auto;
   display: inline-block;
   max-width: 150px;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 .navigationP__link:link,
@@ -141,7 +141,7 @@
     /* top: 25%;
     left: 50%; */
     /* transform: translate(-50%, -50%); */
-    text-align: center;
+
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -227,6 +227,10 @@
     .navigationP__icon::after {
     top: 0;
     transform: rotate(-135deg);
+  }
+
+  .movedown {
+    padding-top: 0;
   }
 }
 
