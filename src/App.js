@@ -14,6 +14,7 @@ import Login from "./pages/Login_component";
 import SignUp from "./pages/Signup_component";
 import UserDetails from "./components/UserDetails";
 import ExistingEventsLanding from "./pages/ExistingEventsLanding";
+import TermsOfUse from "./pages/TermsOfService";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/TermsOfUse" element={<TermsOfUse />} />
           <Route path="/userDetails" element={<UserDetails />} />
           <Route path="/home" element={<Navbar />}>
             <Route index element={<Index />} />
