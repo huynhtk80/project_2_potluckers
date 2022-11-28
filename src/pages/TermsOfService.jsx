@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 
 function TermsOfUse() {
+  let [loginStatus, setLoginStatus] = useState(false);
+  const [checked, setChecked] = useState(false);
+  const handleChange = (event) => {
+    setChecked(false);
+  };
   return (
     <div className="footer-container">
       <div id="header-background">
@@ -13,9 +18,15 @@ function TermsOfUse() {
           </h1>
           <nav>
             <ul>
-              <li>
-                <NavLink to="/" end>Home</NavLink>
-              </li>
+              <li className="navigationP__item">
+              <NavLink
+                to="/"
+                className="navigationP__link"
+                onClick={handleChange}
+              >
+                Home
+              </NavLink>
+            </li>
             </ul>
           </nav>
         </header>
