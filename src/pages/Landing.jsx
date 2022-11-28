@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "../sass/main.scss";
-// import "../css/style.css";
+import "../css/style.css";
 // import "../css/icon-font.css";
 
 import codeVideo from "../img/code.mp4";
@@ -18,6 +18,12 @@ import tProgress from "../img/potlucker-track-progress.jpg";
 import kInformed from "../img/potlucker-keeps-informed.jpg";
 import pMenu from "../img/potlucker-perfect-menus.jpg";
 import tProfile from "../img/tyler-sartison.jpg";
+import timProfile from "../img/tim.jpg";
+import tijaProfile from "../img/tija.jpg";
+import romellProfile from "../img/romell.jpg";
+import logoWhite from "../img/logowhite.png";
+import logo2White from "../img/logo2white.png";
+
 
 function Landing() {
   const [checked, setChecked] = useState(false);
@@ -94,7 +100,7 @@ function Landing() {
       {/* <!--Start Header Section--> */}
       <header className="header">
         <div className="header__logo-box">
-          <img src="#" alt="Logo" className="header__logo" />
+          <img src={logoWhite} alt="Logo" className="header__logo" />
         </div>
 
         <div className="header__text-box">
@@ -103,7 +109,7 @@ function Landing() {
             <span className="heading-primary--sub">Where Awesome Happens</span>
           </h1>
 
-          <Link to="/home" className="btn btn--white btn--animated">
+          <Link to="/home" className="btn btn--white btn--white:hover">
             Sign in / Sign Up
           </Link>
         </div>
@@ -520,7 +526,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={kProfile}
+                src={tijaProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -533,7 +539,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Kshitija Shirsathe</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -541,7 +547,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/kshitija-shirsathe-095a2197/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
@@ -552,7 +558,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={rProfile}
+                src={romellProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -563,7 +569,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Romell Bermundo</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -571,7 +577,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/romellbermundo/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
@@ -582,7 +588,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={rProfile}
+                src={timProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -593,7 +599,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Timothy Huynh</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -601,7 +607,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/timothy-huynh-yyc/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
@@ -722,35 +728,25 @@ function Landing() {
 <!--startFooter Section--> */}
       <footer className="footer">
         <div className="footer__logo-box">
-          <img src="#" alt="Full logo" className="footer__logo" />
+          <img src={logo2White} alt="Full logo" className="footer__logo" />
         </div>
         <div className="row">
           <div className="col-1-of-2">
             <div className="footer__navigation">
               <ul className="footer__list">
                 <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
+                  <a href="#top" className="footer__link">
+                    Back to Top
                   </a>
                 </li>
                 <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
-                  </a>
-                </li>
-                <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
-                  </a>
-                </li>
-                <li className="footer__item">
-                  <a href="#" className="footer__link">
+                  <a href="/PrivacyPolicy" className="footer__link">
                     Privacy policy
                   </a>
                 </li>
                 <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Terms
+                  <a href="/TermsOfUse" className="footer__link">
+                    Terms of use
                   </a>
                 </li>
               </ul>
@@ -766,10 +762,11 @@ function Landing() {
               <a href="#" className="footer__link">
                 Advanced CSS and Sass
               </a>
-              . Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to
+              . Copyright &copy; by Jonas Schmedtmann. 
+              {/* You are 100% allowed to
               use this webpage for both personal and commercial use, but NOT to
               claim it as your own design. A credit to the original author,
-              Jonas Schmedtmann, is of course highly appreciated!
+              Jonas Schmedtmann, is of course highly appreciated! */}
             </p>
           </div>
         </div>

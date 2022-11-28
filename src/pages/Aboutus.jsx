@@ -52,7 +52,8 @@ function Aboutus() {
             {/* <p>Good Food. Combine. </p> */}
             {/* <br /> */}
             <p>
-              <Link to="/home/PlanYourOwnEvent">Plan Your Own Event</Link>
+              <br />
+              <Link to="/home/PlanYourOwnEvent" className="btn btn--green">Plan Your Own Event</Link>
             </p>
       </div>
       </div>
