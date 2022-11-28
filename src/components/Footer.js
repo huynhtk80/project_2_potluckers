@@ -9,13 +9,17 @@ export const Footer = () => {
           <p className="col-sm">
             &copy;{new Date().getFullYear()} Kamikaze Cheese | All rights
             reserved |{" "}
-            <a href="/TermsOfUse" className="footer__link">
-              Terms of Use
+            <a href="/" className="footer__link">
+              Home
             </a>{" "}
             |{" "}
             <a href="/PrivacyPolicy" className="footer__link">
               Privacy
-            </a>
+            </a>{" "}
+            |{" "}
+            <a href="/TermsOfUse" className="footer__link">
+              Terms of Use
+            </a>{" "}
           </p>
         </div>
       </div>
