@@ -1,4 +1,5 @@
 .navigationP {
+  z-index: 10;
   background: linear-gradient(93deg, #7ed56f, #28b485);
   height: auto;
   width: 100%;
@@ -103,8 +104,8 @@
 
   .navigationP__background {
     display: block;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     position: fixed;
     top: 4.5rem;
@@ -115,8 +116,8 @@
   }
 
   .navigationP__button {
-    top: 4rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
   }
 
   .navigationP__nav {
@@ -124,7 +125,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -136,12 +136,6 @@
   }
 
   .logoimage {
-    /* height: 30px; */
-    /* position: absolute; */
-    /* top: 25%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -153,11 +147,6 @@
     font-size: 3rem;
   }
   .navigationP__list {
-    /* position: absolute; */
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-
     list-style: none;
     text-align: center;
     width: 100%;
