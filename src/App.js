@@ -29,7 +29,6 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/TermsOfUse" element={<TermsOfUse />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-          <Route path="/userDetails" element={<UserDetails />} />
           <Route path="/home" element={<PlayingNavBar />}>
             <Route index element={<Index />} />
             <Route path="Aboutus" element={<Aboutus />} />
@@ -42,7 +41,7 @@ function App() {
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             {/* <Route path="Dashboard" element={<Dashboard />} /> */}
             <Route path="fullrecipe/" element={<FullRecipe />} />
-
+            <Route path="userDetails" element={<UserDetails />} />
             <Route path="*" element={<Notfound />} />
           </Route>
           <Route path="*" element={<Notfound />} />

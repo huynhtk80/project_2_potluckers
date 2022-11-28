@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./PlayingNavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
-import longLogo from "../img/logo2.png";
+import longLogo from "../img/PotluckerBlackLandscape.png";
 
 function PlayingNavBar() {
   let [loginStatus, setLoginStatus] = useState(false);
@@ -87,7 +87,7 @@ function PlayingNavBar() {
             </li>
             <li className="navigationP__item">
               <NavLink
-                to="/UserDetails"
+                to="/home/UserDetails"
                 className="navigationP__link"
                 onClick={handleChange}
               >
