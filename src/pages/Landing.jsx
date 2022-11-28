@@ -22,6 +22,8 @@ import timProfile from "../img/tim.jpg";
 import tijaProfile from "../img/tija.jpg";
 import romellProfile from "../img/romell.jpg";
 import logoWhite from "../img/logowhite.png";
+import logo2White from "../img/logo2white.png";
+
 
 function Landing() {
   const [checked, setChecked] = useState(false);
@@ -726,25 +728,15 @@ function Landing() {
 <!--startFooter Section--> */}
       <footer className="footer">
         <div className="footer__logo-box">
-          <img src="#" alt="Full logo" className="footer__logo" />
+          <img src={logo2White} alt="Full logo" className="footer__logo" />
         </div>
         <div className="row">
           <div className="col-1-of-2">
             <div className="footer__navigation">
               <ul className="footer__list">
                 <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
-                  </a>
-                </li>
-                <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
-                  </a>
-                </li>
-                <li className="footer__item">
-                  <a href="#" className="footer__link">
-                    Link
+                  <a href="#top" className="footer__link">
+                    Back to Top
                   </a>
                 </li>
                 <li className="footer__item">
@@ -754,7 +746,7 @@ function Landing() {
                 </li>
                 <li className="footer__item">
                   <a href="#" className="footer__link">
-                    Terms
+                    Terms of use
                   </a>
                 </li>
               </ul>
