@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
+import longLogo from "../img/PotluckerBlackLandscape.png";
+
 
 function TermsOfUse() {
   let [loginStatus, setLoginStatus] = useState(false);
@@ -11,14 +13,27 @@ function TermsOfUse() {
   };
   return (
     <div className="footer-container">
-      <div id="header-background">
-        <header id="nav-header">
-          <h1>
-            <NavLink to="/" id="nav-logo">POTLUCKER</NavLink>
-          </h1>
-          <nav>
-            <ul>
-              <li className="navigationP__item">
+      <div className="navigationP">
+        <input
+          type="checkbox"
+          className="navigationP__checkbox"
+          checked={checked}
+          onChange={(e) => setChecked(e.target.checked)}
+          id="navi-toggle"
+        />
+
+        <label htmlFor="navi-toggle" className="navigationP__button">
+          <span className="navigationP__icon">&nbsp;</span>
+        </label>
+
+        <div className="navigationP__background">&nbsp;</div>
+
+        <nav className="navigationP__nav">
+          <Link to="/" className="logoimage">
+            <img src={longLogo} className="logoimage" />
+          </Link>
+          <ul className="navigationP__list">
+            <li className="navigationP__item">
               <NavLink
                 to="/"
                 className="navigationP__link"
@@ -27,9 +42,9 @@ function TermsOfUse() {
                 Home
               </NavLink>
             </li>
-            </ul>
-          </nav>
-        </header>
+
+          </ul>
+        </nav>
       </div>
       <div className="footer-body">
 <h1>Terms and Conditions</h1>
@@ -109,7 +124,7 @@ You agree that the original English text shall prevail in the case of a dispute.
 <li className="footer-list">By visiting this page on our website: <a href="http://www.potlucker.com/contact" rel="external nofollow noopener" target="_blank">http://www.potlucker.com/contact</a></li>
 <li className="footer-list"> This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">TermsFeed Terms and Conditions Generator</a>.</li>
 </ul>
-    </div>
+      </div>
     </div>
   );
 }
