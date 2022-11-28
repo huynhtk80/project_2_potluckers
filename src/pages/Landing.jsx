@@ -18,6 +18,9 @@ import tProgress from "../img/potlucker-track-progress.jpg";
 import kInformed from "../img/potlucker-keeps-informed.jpg";
 import pMenu from "../img/potlucker-perfect-menus.jpg";
 import tProfile from "../img/tyler-sartison.jpg";
+import timProfile from "../img/tim.jpg";
+import tijaProfile from "../img/tija.jpg";
+import romellProfile from "../img/romell.jpg";
 import logoWhite from "../img/logowhite.png";
 
 function Landing() {
@@ -521,7 +524,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={kProfile}
+                src={tijaProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -534,7 +537,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Kshitija Shirsathe</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -542,7 +545,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/kshitija-shirsathe-095a2197/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
@@ -553,7 +556,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={rProfile}
+                src={romellProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -564,7 +567,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Romell Bermundo</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -572,7 +575,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/romellbermundo/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
@@ -583,7 +586,7 @@ function Landing() {
           <div className="story">
             <figure className="story__shape">
               <img
-                src={rProfile}
+                src={timProfile}
                 alt="Person on a tour"
                 className="story__img"
               />
@@ -594,7 +597,7 @@ function Landing() {
                 I had the best time ever!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1>Timothy Huynh</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -602,7 +605,7 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="#" className="btn btn--green">
+              <a href="https://www.linkedin.com/in/timothy-huynh-yyc/" className="btn btn--green">
                 Full Bio
               </a>
             </div>
