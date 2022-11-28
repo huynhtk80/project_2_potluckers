@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 
-// import kProfile from "../img/nat-8.jpg";
-
-
 function TermsOfUse() {
   return (
-    <div className="tos-container">
+    <div className="footer-container">
       <div id="header-background">
         <header id="nav-header">
           <h1>
@@ -23,7 +20,7 @@ function TermsOfUse() {
           </nav>
         </header>
       </div>
-      <div className="tos-body">
+      <div className="footer-body">
 <h1>Terms and Conditions</h1>
 <p>Last updated: November 28, 2022</p>
 <p>Please read these terms and conditions carefully before using Our Service.</p>
@@ -33,25 +30,25 @@ function TermsOfUse() {
 <h2>Definitions</h2>
 <p>For the purposes of these Terms and Conditions:</p>
 <ul>
-<li className="tos-list"><p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p></li>
-<li className="tos-list"><p><strong>Country</strong> refers to: Alberta,  Canada</p></li>
-<li className="tos-list"><p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Kamikaze Cheese, 800 3 St SE 3rd Floor, Calgary, AB T2G 0E7.</p></li>
-<li className="tos-list">
+<li className="footer-list"><p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p></li>
+<li className="footer-list"><p><strong>Country</strong> refers to: Alberta,  Canada</p></li>
+<li className="footer-list"><p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Kamikaze Cheese, 800 3 St SE 3rd Floor, Calgary, AB T2G 0E7.</p></li>
+<li className="footer-list">
 <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
 </li>
-<li className="tos-list">
+<li className="footer-list">
 <p><strong>Service</strong> refers to the Website.</p>
 </li>
-<li className="tos-list">
-<p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">TermsFeed Terms and Conditions Generator</a>.</p>
+<li className="footer-list">
+<p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</p>
 </li>
-<li className="tos-list">
+<li className="footer-list">
 <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
 </li>
-<li className="tos-list">
+<li className="footer-list">
 <p><strong>Website</strong> refers to Potlucker, accessible from <a href="http://www.potlucker.com" rel="external nofollow noopener" target="_blank">http://www.potlucker.com</a></p>
 </li>
-<li className="tos-list">
+<li className="footer-list">
 <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
 </li>
 </ul>
@@ -98,7 +95,8 @@ You agree that the original English text shall prevail in the case of a dispute.
 <h1>Contact Us</h1>
 <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
 <ul>
-<li className="tos-list">By visiting this page on our website: <a href="http://www.potlucker.com/contact" rel="external nofollow noopener" target="_blank">http://www.potlucker.com/contact</a></li>
+<li className="footer-list">By visiting this page on our website: <a href="http://www.potlucker.com/contact" rel="external nofollow noopener" target="_blank">http://www.potlucker.com/contact</a></li>
+<li className="footer-list"> This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">TermsFeed Terms and Conditions Generator</a>.</li>
 </ul>
     </div>
     </div>

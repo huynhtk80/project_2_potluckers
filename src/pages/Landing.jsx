@@ -740,7 +740,7 @@ function Landing() {
                   </a>
                 </li>
                 <li className="footer__item">
-                  <a href="#" className="footer__link">
+                  <a href="/PrivacyPolicy" className="footer__link">
                     Privacy policy
                   </a>
                 </li>

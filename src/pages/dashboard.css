@@ -48,12 +48,12 @@
   font-size: 30px;
   font-family: "Trirong", serif;
 }
-.tos-container .tos-body{
+.footer-container .footer-body{
   font-size: 15px;
   margin-top: 100px;
   width: 90%;
-  margin-left: 100px;
+  margin-left: 80px;
 }
-.tos-container .tos-list{
+.footer-container .footer-list{
   margin-left: 40px;
 }
