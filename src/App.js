@@ -14,6 +14,7 @@ import Login from "./pages/Login_component";
 import SignUp from "./pages/Signup_component";
 import UserDetails from "./components/UserDetails";
 import ExistingEventsLanding from "./pages/ExistingEventsLanding";
+import PlayingNavBar from "./components/PlayingNavBar";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/play" element={<PlayingNavBar />} />
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/userDetails" element={<UserDetails />} />

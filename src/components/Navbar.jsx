@@ -10,21 +10,29 @@ function Navbar() {
       <div id="header-background">
         <header id="nav-header">
           <h1>
-            <NavLink to="/home" id="nav-logo">POTLUCKER</NavLink>
+            <NavLink to="/home" id="nav-logo">
+              POTLUCKER
+            </NavLink>
           </h1>
           <nav>
             <ul>
               <li>
-                <NavLink to="/home" end>Home</NavLink>
+                <NavLink to="/home" end>
+                  Home
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/home/PlanYourOwnEvent">Plan Your Own Event</NavLink>
+                <NavLink to="/home/PlanYourOwnEvent">
+                  Plan Your Own Event
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/home/ExistingEvents">Existing Events</NavLink>
               </li>
               <li>
-                <NavLink to="/home/MealPlanningRecipes">Find New Recipes</NavLink>
+                <NavLink to="/home/MealPlanningRecipes">
+                  Find New Recipes
+                </NavLink>
               </li>
               <li>
                 <NavLink to="/home/Aboutus">About Us</NavLink>
