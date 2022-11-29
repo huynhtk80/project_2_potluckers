@@ -5,23 +5,35 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { act } from "react-dom/test-utils";
+import { clear } from "@testing-library/user-event/dist/clear";
 
-export default function AlertPopup({ open, setChoice }) {
+export default function AlertPopup({
+  open,
+  setOpen,
+  rows,
+  setRows,
+  activeId,
+  setActiveId,
+}) {
   //   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = async (message) => {
+    if (message === "yes") {
+      await setRows(rows.filter((row) => row.id !== activeId));
+      setActiveId(null);
+    } else if (message === "no") {
+      setActiveId(null);
+    }
     setOpen(false);
   };
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -29,18 +41,17 @@ export default function AlertPopup({ open, setChoice }) {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          {"Delete Current Row!"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+            Would you like to delete this row?.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
+          <Button onClick={() => handleClose("no")}>Cancel</Button>
+          <Button onClick={() => handleClose("yes")} autoFocus>
+            Yes
           </Button>
         </DialogActions>
       </Dialog>

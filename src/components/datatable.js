@@ -17,6 +17,7 @@ import {
 } from "@mui/x-data-grid";
 import { updateExistingPotluck } from "../api/potluckAPI";
 import { randomRecipeGet } from "../api/recipeAPIs";
+import AlertPopup from "./AlertPopup";
 
 // add new
 function EditToolbar(props) {
@@ -30,15 +31,15 @@ function EditToolbar(props) {
       {
         _id: _id,
         id: _id,
-        item: "Your Choice",
+        item: props.potluck.choiceStyle,
         responsible: "",
         notes: "",
-        isNew: true,
+        isNew: false,
       },
     ]);
     setRowModesModel((oldModel) => ({
       ...oldModel,
-      [_id]: { mode: GridRowModes.Edit, fieldToFocus: "item" },
+      [_id]: { mode: GridRowModes.View, fieldToFocus: "item" },
     }));
   };
 
@@ -64,16 +65,14 @@ export default function FullFeaturedCrudGrid({
   type,
 }) {
   const [rows, setRows] = React.useState(potluck[type]);
+  const [activeId, setActiveId] = React.useState();
   const [rowModesModel, setRowModesModel] = React.useState({});
-  // console.log("top rows", rows);
+  const [open, setOpen] = React.useState(false);
+  const [savedResolve, setSavedResolve] = React.useState();
 
   React.useEffect(() => {
     const oldPotluck = potluck;
-    // console.log("the Old: ", oldPotluck);
-    // console.log("the new rows: ", rows);
     oldPotluck[type] = rows;
-    // console.log("the maybe updatded: ", oldPotluck);
-
     setPotluck(oldPotluck);
     updateExistingPotluck(potluck);
 
@@ -123,8 +122,10 @@ export default function FullFeaturedCrudGrid({
     console.log("Current Row:", rows);
   };
 
-  const handleDeleteClick = (id) => () => {
-    setRows(rows.filter((row) => row.id !== id));
+  const handleDeleteClick = (id) => async () => {
+    setActiveId(id);
+    setOpen(true);
+    // setRows(rows.filter((row) => row.id !== id));
   };
 
   const handleCancelClick = (id) => () => {
@@ -249,9 +250,18 @@ export default function FullFeaturedCrudGrid({
           Toolbar: EditToolbar,
         }}
         componentsProps={{
-          toolbar: { setRows, setRowModesModel, type },
+          toolbar: { setRows, setRowModesModel, type, potluck },
         }}
         experimentalFeatures={{ newEditingApi: true }}
+      />
+
+      <AlertPopup
+        open={open}
+        setOpen={setOpen}
+        rows={rows}
+        setRows={setRows}
+        activeId={activeId}
+        setActiveId={setActiveId}
       />
     </Box>
   );
