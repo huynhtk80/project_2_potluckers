@@ -73,8 +73,8 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className="mb-3">
-          <label>Email address</label>
+        <div className="mb-4">
+          <label className="form-label" htmlFor="form4Example2">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -94,7 +94,7 @@ export default class SignUp extends Component {
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn--green">
             Sign Up
           </button>
         </div>

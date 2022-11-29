@@ -38,7 +38,7 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <form className=" col-sm-6 offset-3 pt-5 signup_form" onSubmit={this.handleSubmit}>
+      <form className="signup_form" onSubmit={this.handleSubmit}>
         <h3>Sign In</h3>
 
         <div className="mb-3">
@@ -75,7 +75,7 @@ export default class Login extends Component {
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn--green">
             Submit
           </button>
         </div>
