@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
+import { Footer } from "../components/Footer";
 
 
 function TermsOfUse() {
@@ -12,6 +13,7 @@ function TermsOfUse() {
     setChecked(false);
   };
   return (
+    <>
     <div className="footer-container">
       <div className="navigationP">
         <input
@@ -126,6 +128,8 @@ You agree that the original English text shall prevail in the case of a dispute.
 </ul>
       </div>
     </div>
+      <Footer />
+    </>
   );
 }
 

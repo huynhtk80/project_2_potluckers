@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
+import { Footer } from "../components/Footer";
 
 function PrivacyPolicy() {
   let [loginStatus, setLoginStatus] = useState(false);
@@ -11,6 +12,7 @@ function PrivacyPolicy() {
     setChecked(false);
   };
   return (
+    <>
     <div className="footer-container">
       <div className="navigationP">
         <input
@@ -225,6 +227,8 @@ function PrivacyPolicy() {
 </ul>
     </div>
     </div>
+          <Footer />
+          </>
   );
 }
 
