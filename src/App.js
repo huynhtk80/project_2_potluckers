@@ -1,5 +1,8 @@
 import Navbar from "./components/Navbar";
 import { Outlet, BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Index from "./pages/Index";
 import Aboutus from "./pages/Aboutus";
 import MealPlanningRecipes from "./pages/MealPlanningRecipes";
@@ -21,6 +24,7 @@ import PlayingNavBar from "./components/PlayingNavBar";
 function App() {
   return (
     <>
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
