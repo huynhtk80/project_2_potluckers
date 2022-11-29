@@ -5,6 +5,7 @@ export const createNewPotluck = async (potluck) => {
   const response = await axios({
     method: "POST",
     url: `/potluck`,
+    data: potluck,
   });
   const newDBPotluck = await response.data;
   return newDBPotluck;

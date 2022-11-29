@@ -8,6 +8,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/DeleteOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Close";
+import SearchIcon from "@mui/icons-material/Search";
 import {
   GridRowModes,
   DataGrid,
@@ -15,6 +16,7 @@ import {
   GridActionsCellItem,
 } from "@mui/x-data-grid";
 import { updateExistingPotluck } from "../api/potluckAPI";
+import { randomRecipeGet } from "../api/recipeAPIs";
 
 // add new
 function EditToolbar(props) {
@@ -63,14 +65,14 @@ export default function FullFeaturedCrudGrid({
 }) {
   const [rows, setRows] = React.useState(potluck[type]);
   const [rowModesModel, setRowModesModel] = React.useState({});
-  console.log("top rows", rows);
+  // console.log("top rows", rows);
 
   React.useEffect(() => {
     const oldPotluck = potluck;
-    console.log("the Old: ", oldPotluck);
-    console.log("the new rows: ", rows);
+    // console.log("the Old: ", oldPotluck);
+    // console.log("the new rows: ", rows);
     oldPotluck[type] = rows;
-    console.log("the maybe updatded: ", oldPotluck);
+    // console.log("the maybe updatded: ", oldPotluck);
 
     setPotluck(oldPotluck);
     updateExistingPotluck(potluck);
@@ -87,10 +89,28 @@ export default function FullFeaturedCrudGrid({
   };
 
   const handleEditClick = (id) => () => {
-    console.log(id);
-    console.log(rowModesModel);
+    // console.log("edit Click id", id);
+    // console.log("edit Click row model:", rowModesModel);
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
-    console.log(rowModesModel);
+    // console.log("edit Click rowmodel after set row model:", rowModesModel);
+  };
+
+  const handleSearchClick = (id) => async () => {
+    console.log("Search Id", id);
+    // console.log(rowModesModel);
+    //setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.Edit } });
+    const randomRecipe = await randomRecipeGet();
+    console.log(randomRecipe);
+    const addRecipe = {
+      recipeName: randomRecipe.recipes[0].title,
+      notes: randomRecipe.recipes[0].id,
+    };
+    console.log("add recipe", addRecipe);
+    console.log({ ...addRecipe });
+    setRows(
+      rows.map((row) => (row._id === id ? { ...row, ...addRecipe } : row))
+    );
+    console.log("after Search Rows: ", rows);
   };
 
   const handleSaveClick = (id) => () => {
@@ -98,7 +118,7 @@ export default function FullFeaturedCrudGrid({
     console.log("current row mode: ", rowModesModel);
     console.log("Current Row:", rows);
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
-    console.log(rowModesModel);
+    console.log("on save", rowModesModel);
     console.log("Current Potluck:", potluck);
     console.log("Current Row:", rows);
   };
@@ -189,6 +209,13 @@ export default function FullFeaturedCrudGrid({
             icon={<DeleteIcon />}
             label="Delete"
             onClick={handleDeleteClick(id)}
+            color="inherit"
+          />,
+          <GridActionsCellItem
+            icon={<SearchIcon />}
+            label="Search"
+            className="textPrimary"
+            onClick={handleSearchClick(id)}
             color="inherit"
           />,
         ];

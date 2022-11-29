@@ -35,17 +35,20 @@ function ExistingEvents() {
             <h3 className="title flex-title">
               <h1>{potluck.title}</h1>
 
-              <p>Organized by: {potluck.owner}</p>
+              <p>Organized by: {potluck.owner && potluck.owner.name}</p>
               <p>Event Date: {Date(potluck.eventDate).toString()}</p>
               <p>
+                <p>Event Theme: {potluck.theme}</p>
+
                 <b>Location: </b>
-                {potluck.location.name}
+                {potluck.location && potluck.location.name}
               </p>
-              <p>{potluck.location.address}</p>
+              <p>{potluck.location && potluck.location.address}</p>
               <p>
-                {potluck.location.city}, {potluck.location.province}
+                {potluck.location && potluck.location.city},{" "}
+                {potluck.location && potluck.location.province}
               </p>
-              <p>{potluck.location.postalcode}</p>
+              <p>{potluck.location && potluck.location.postalcode}</p>
               <p>Anticipated Attendees: {potluck.numberExpected}</p>
               <p>Confirmed Attendees: {potluck.numberAttending}</p>
               <a
