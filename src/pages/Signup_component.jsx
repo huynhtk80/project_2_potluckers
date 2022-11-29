@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../App.css'
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -12,7 +15,7 @@ export default class SignUp extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(e) {
-    e.preventDefault();
+    try{e.preventDefault();
     const { fname, lname, email, password } = this.state;
     console.log(fname, lname, email, password);
     fetch("http://localhost:4000/auth/register", {
@@ -35,13 +38,19 @@ export default class SignUp extends Component {
         console.log(data, "userRegister");
         if (data.status == "ok") {
           alert("Signup successful");
+          toast.success("Signed up successfully, please Login!")
           window.location.href = "./sign-in";
         }
       });
+    }catch(err){
+      console.log('Error')
+      toast.error('Error')
+
+    }
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className=" col-sm-6 offset-3 pt-5 signup_form" onSubmit={this.handleSubmit}>
         <h3>Sign Up</h3>
 
         <div className="mb-3">
@@ -64,8 +73,8 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div className="mb-3">
-          <label>Email address</label>
+        <div className="mb-4">
+          <label className="form-label" htmlFor="form4Example2">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -85,7 +94,7 @@ export default class SignUp extends Component {
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn--green">
             Sign Up
           </button>
         </div>
