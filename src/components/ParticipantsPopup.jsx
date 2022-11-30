@@ -9,19 +9,19 @@ function ParticipantsPopup(props) {
   const [pEmail, setPEmail] = useState();
 
   const handleClick = () => {
-    const oldPotluck = props.potluck;
-    console.log("curent potluck", oldPotluck);
-    oldPotluck.participants.push({
-      name: pName,
-      email: pEmail,
-      attending: true,
-    });
-    console.log("should be newParticipants:", oldPotluck);
-    props.setPotluck(oldPotluck);
-    console.log("the potluck", props.potluck);
-    setPEmail("");
-    setPName("");
-    updateExistingPotluck(props.potluck);
+    if (pEmail.length > 0) {
+      const oldPotluck = props.potluck;
+      oldPotluck.numberAttending = oldPotluck.numberAttending + 1;
+      oldPotluck.participants.push({
+        name: pName,
+        email: pEmail,
+        attending: true,
+      });
+      props.setPotluck(oldPotluck);
+      setPEmail("");
+      setPName("");
+      updateExistingPotluck(props.potluck);
+    }
   };
 
   const handleRemoveClick = () => {

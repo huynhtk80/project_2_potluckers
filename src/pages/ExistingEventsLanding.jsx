@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 
 function ExistingEventsLanding() {
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div id="SuperWrap">
@@ -22,6 +25,13 @@ function ExistingEventsLanding() {
                   type="search"
                   variant="filled"
                 />
+                <a
+                  onClick={handleClick}
+                  className="btn btn--green"
+                  style={{ padding: "10px" }}
+                >
+                  Search for event
+                </a>
 
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Upcoming Events
