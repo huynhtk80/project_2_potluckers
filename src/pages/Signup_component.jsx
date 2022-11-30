@@ -60,7 +60,7 @@ export default class SignUp extends Component {
         <div className="signup-container">
           <form className="signup-form" onSubmit={this.handleSubmit}>
             <img src={kcheese} className="team-logo"/>
-          <h2>Sign Up</h2>
+          <h2 className="signup-label">Sign Up</h2>
 
             <div className="form-outline">
               {/* <label>First name</label> */}
@@ -111,7 +111,7 @@ export default class SignUp extends Component {
 
             <br />
             <p className="forgot-password text-right">
-              Already registered? <a href="/sign-in">Sign in</a>
+              Already have an account? <a href="/sign-in">Sign in</a>
             </p>
           </form>
         </div>

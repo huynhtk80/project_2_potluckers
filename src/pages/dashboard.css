@@ -81,7 +81,7 @@
   outline-color: none;
 }
 
-.signup-form h2 {
+.signup-label {
   color: #1d741b;
   margin-bottom: 30px;
   font-size: 25px;
@@ -93,5 +93,6 @@
 }
 
 .root{
-  background-color: #47ac48;
+  background-image: url(../img/potlucker-header-stew.jpg);
+  background-size: 3000px;
 }
