@@ -749,12 +749,12 @@ function Landing() {
                   </a>
                 </li>
                 <li className="footer__item">
-                  <a href="/PrivacyPolicy" className="footer__link">
+                  <a href="/home/PrivacyPolicy" className="footer__link">
                     Privacy policy
                   </a>
                 </li>
                 <li className="footer__item">
-                  <a href="/TermsOfUse" className="footer__link">
+                  <a href="/home/TermsOfUse" className="footer__link">
                     Terms of use
                   </a>
                 </li>

@@ -13,11 +13,11 @@ export const Footer = () => {
               Home
             </a>{" "}
             |{" "}
-            <a href="/PrivacyPolicy" className="footer__link">
+            <a href="/home/PrivacyPolicy" className="footer__link">
               Privacy
             </a>{" "}
             |{" "}
-            <a href="/TermsOfUse" className="footer__link">
+            <a href="/home/TermsOfUse" className="footer__link">
               Terms of Use
             </a>{" "}
           </p>
