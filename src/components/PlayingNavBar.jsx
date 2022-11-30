@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./PlayingNavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
+import { Footer } from "./Footer";
 
 function PlayingNavBar() {
-  let [loginStatus, setLoginStatus] = useState(false);
+  let [loginStatus, setLoginStatus] = useState(true);
+  let [name, setName] = useState();
+
   const [checked, setChecked] = useState(false);
-  const handleChange = (event) => {
-    setChecked(false);
-  };
+  const handleChange = (event) => {};
   return (
     <>
       <div className="navigationP">
@@ -40,15 +41,19 @@ function PlayingNavBar() {
                 Home
               </NavLink>
             </li>
-            <li className="navigationP__item">
-              <NavLink
-                to="/home/PlanYourOwnEvent"
-                className="navigationP__link"
-                onClick={handleChange}
-              >
-                Create Event
-              </NavLink>
-            </li>
+            {loginStatus ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/home/PlanYourOwnEvent"
+                  className="navigationP__link"
+                  onClick={handleChange}
+                >
+                  Create Event
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
             <li className="navigationP__item">
               <NavLink
                 to="/home/ExistingEvents"
@@ -99,6 +104,9 @@ function PlayingNavBar() {
       </div>
       <div className="movedown">
         <Outlet />
+      </div>
+      <div style={{ marginTop: "50%", clear: "both" }}>
+        <Footer />
       </div>
     </>
   );
