@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Helmet } from 'react-helmet';
+
+import kcheese from "../img/kcheese.png"
 
 export default class Login extends Component {
   constructor(props) {
@@ -38,11 +41,17 @@ export default class Login extends Component {
   }
   render() {
     return (
+      <>
+      <Helmet>
+          <body className="root" />
+        </Helmet>
+        <div className="signup-container">
       <form className="signup_form" onSubmit={this.handleSubmit}>
-        <h3>Sign In</h3>
+      <img src={kcheese} className="team-logo"/>
+        <h2 className="signup-label">Sign In</h2>
 
-        <div className="mb-3">
-          <label>Email address</label>
+        <div className="form-outline">
+          {/* <label>Email address</label> */}
           <input
             type="email"
             className="form-control"
@@ -51,8 +60,8 @@ export default class Login extends Component {
           />
         </div>
 
-        <div className="mb-3">
-          <label>Password</label>
+        <div className="form-outline">
+          {/* <label>Password</label> */}
           <input
             type="password"
             className="form-control"
@@ -60,8 +69,8 @@ export default class Login extends Component {
             onChange={(e) => this.setState({ password: e.target.value })}
           />
         </div>
-
-        <div className="mb-3">
+<br/>
+        <div className="form-outline">
           <div className="custom-control custom-checkbox">
             <input
               type="checkbox"
@@ -80,9 +89,12 @@ export default class Login extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          <a href="/sign-up">Sign Up</a>
+        <br/>
+          Not a member? <a href="/sign-up">Sign Up</a>
         </p>
       </form>
+      </div>
+      </>
     );
   }
 }
