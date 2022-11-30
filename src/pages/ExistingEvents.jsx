@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getexistingPotluck } from "../api/potluckAPI";
 import FullFeaturedCrudGrid from "../components/datatable";
-import EditDataTable from "../components/EditDataTable";
 import ParticipantsPopup from "../components/ParticipantsPopup";
 
 function ExistingEvents() {

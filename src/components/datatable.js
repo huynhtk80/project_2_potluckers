@@ -1,7 +1,6 @@
 import * as React from "react";
 import bson from "bson";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
@@ -69,7 +68,6 @@ export default function FullFeaturedCrudGrid({
   const [activeId, setActiveId] = React.useState();
   const [rowModesModel, setRowModesModel] = React.useState({});
   const [open, setOpen] = React.useState(false);
-  const [savedResolve, setSavedResolve] = React.useState();
 
   React.useEffect(() => {
     const oldPotluck = potluck;

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { CUISINES, INTOLERANCES } from "./searchOptions";
+// import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
 import RecipeCard from "./RecipeCard";
 
 function RecipeSearch() {
-  const [selectedIntolerances, setSelectedIntolerances] = useState(null);
-  const [selectedCuisines, setSelectedCuisines] = useState(null);
+  // const [selectedIntolerances, setSelectedIntolerances] = useState(null);
+  // const [selectedCuisines, setSelectedCuisines] = useState(null);
   const [queryString, setQueryString] = useState(null);
   const [results, setResults] = useState(null);
 

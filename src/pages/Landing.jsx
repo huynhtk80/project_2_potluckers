@@ -6,8 +6,6 @@ import "../css/style.css";
 // import "../css/icon-font.css";
 
 import codeVideo from "../img/code.mp4";
-import kProfile from "../img/nat-8.jpg";
-import rProfile from "../img/nat-9.jpg";
 import kWings from "../img/potlucker-kamikaze-wings.jpg";
 import kbulgogi from "../img/potlucker-korean-beef-bulgogi.jpg";
 import mPizza from "../img/potlucker-margherita-pizza.jpg";

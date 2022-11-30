@@ -18,7 +18,7 @@ import UserDetails from "./components/UserDetails";
 import ExistingEventsLanding from "./pages/ExistingEventsLanding";
 import TermsOfUse from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import PlayingNavBar from "./components/PlayingNavBar";
+import PlayingNavBar from "./components/NavBar";
 
 function App() {
   return (

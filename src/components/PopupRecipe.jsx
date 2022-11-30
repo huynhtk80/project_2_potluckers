@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+// import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./PopupRecipe.css";
 
 function PopupRecipe(props) {
-  const [Ingredients, setIngredients] = useState();
+  // const [Ingredients, setIngredients] = useState();
 
   // useEffect(() => {
   //   const fetchRecipeIngredient = async () => {

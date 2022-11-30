@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./PlayingNavBar.css";
+import "./NavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
 import { Footer } from "./Footer";
 
 function PlayingNavBar() {
   let [loginStatus, setLoginStatus] = useState(true);
-  let [name, setName] = useState();
+  // let [name, setName] = useState();
 
   const [checked, setChecked] = useState(false);
   const handleChange = (event) => {};
