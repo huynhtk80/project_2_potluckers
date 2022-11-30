@@ -9,15 +9,13 @@
   /* margin-left: 80px; */
   float: left;
   padding-right: 80px;
-  
 }
 .aboutus-main2 {
   font-size: 1.5em;
   width: 50%;
   /* margin-left: 80px; */
-  float: right
+  float: right;
   /* padding-right: 80px */
-  
 }
 .aboutus-sidebar {
   font-size: 1.5em;
@@ -28,43 +26,78 @@
 }
 .aboutus-sidebar2 {
   font-size: 1.5em;
-  width: 30%;
+  width: 45%;
   margin-left: 0px;
   float: left;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
-.aboutus-main p{
+.aboutus-main p {
   font-size: 19px;
   line-height: 200%;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
 }
-.aboutus-main2 p{
+.aboutus-main2 p {
   font-size: 19px;
   line-height: 200%;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .aboutus-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutus-main {
+    width: 100%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+  }
+  .aboutus-main2 {
+    width: 100%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutus-sidebar {
+    width: 100%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutus-sidebar2 {
+    width: 100%;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .title-main {
   font-size: 30px;
   font-family: "Trirong", serif;
 }
-.footer-container .footer-body{
+.footer-container .footer-body {
   font-size: 15px;
   margin-top: 100px;
   width: 90%;
   margin-left: 80px;
 }
-.footer-container .footer-list{
+.footer-container .footer-list {
   margin-left: 40px;
 }
 
-.footer-body{
+.footer-body {
   margin-top: 1000px;
 }
 
-.signup-container{
+.signup-container {
   width: 400px;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: #fff;
   padding: 40px;
   margin: 8% auto 0;
@@ -72,7 +105,7 @@
   border-radius: 5px;
 }
 
-.form-control{
+.form-control {
   border-radius: 10px;
   padding: 10px;
   margin: 10px 0;
@@ -87,12 +120,12 @@
   font-size: 25px;
 }
 
-.team-logo{
+.team-logo {
   width: 120px;
   margin-top: -120px;
 }
 
-.root{
+.root {
   background-image: url(../img/potlucker-header-stew.jpg);
   background-size: 3000px;
 }
