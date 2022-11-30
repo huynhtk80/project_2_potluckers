@@ -71,8 +71,10 @@ export default function FullFeaturedCrudGrid({
 
   React.useEffect(() => {
     const oldPotluck = potluck;
+    console.log("at use effect", rows);
     oldPotluck[type] = rows;
     setPotluck(oldPotluck);
+    console.log("at useE", oldPotluck);
     updateExistingPotluck(potluck);
 
     return () => {};
@@ -103,22 +105,15 @@ export default function FullFeaturedCrudGrid({
       recipeName: randomRecipe.recipes[0].title,
       link: randomRecipe.recipes[0].id,
     };
-    console.log("add recipe", addRecipe);
-    console.log({ ...addRecipe });
-    setRows(
+
+    await setRows(
       rows.map((row) => (row._id === id ? { ...row, ...addRecipe } : row))
     );
     console.log("after Search Rows: ", rows);
   };
 
   const handleSaveClick = (id) => () => {
-    console.log(id);
-    console.log("current row mode: ", rowModesModel);
-    console.log("Current Row:", rows);
     setRowModesModel({ ...rowModesModel, [id]: { mode: GridRowModes.View } });
-    console.log("on save", rowModesModel);
-    console.log("Current Potluck:", potluck);
-    console.log("Current Row:", rows);
   };
 
   const handleDeleteClick = (id) => async () => {
