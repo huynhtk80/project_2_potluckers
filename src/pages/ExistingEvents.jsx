@@ -60,17 +60,32 @@ function ExistingEvents() {
               <FullFeaturedCrudGrid
                 setPotluck={setPotluck}
                 potluck={potluck}
-                type="main"
-              />
-              <FullFeaturedCrudGrid
-                setPotluck={setPotluck}
-                potluck={potluck}
                 type="appetizer"
               />
               <FullFeaturedCrudGrid
                 setPotluck={setPotluck}
                 potluck={potluck}
+                type="main"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="sidedish"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
                 type="dessert"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="beverage"
+              />
+              <FullFeaturedCrudGrid
+                setPotluck={setPotluck}
+                potluck={potluck}
+                type="extra"
               />
             </h3>
           </div>
@@ -80,6 +95,7 @@ function ExistingEvents() {
         trigger={participantPopup}
         setTrigger={setParticipantPopup}
         potluck={potluck}
+        setPotluck={setPotluck}
       />
     </>
   );

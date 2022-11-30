@@ -45,6 +45,7 @@ function App() {
             <Route path="PlanYourOwnEvent" element={<PlanYourOwnEvent />} />
             {/* <Route path="Dashboard" element={<Dashboard />} /> */}
             <Route path="fullrecipe/" element={<FullRecipe />} />
+            <Route path="fullrecipe/:id" element={<FullRecipe />} />
             <Route path="userDetails" element={<UserDetails />} />
             <Route path="*" element={<Notfound />} />
           </Route>

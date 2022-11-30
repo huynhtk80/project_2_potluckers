@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getexistingPotluck } from "../api/potluckAPI";
-import FullFeaturedCrudGrid from "../components/datatable";
-import EditDataTable from "../components/EditDataTable";
-import ParticipantsPopup from "../components/ParticipantsPopup";
+import TextField from "@mui/material/TextField";
 
 function ExistingEventsLanding() {
   return (
@@ -20,6 +16,12 @@ function ExistingEventsLanding() {
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Find an Event
                 </h3>
+                <TextField
+                  id="filled-search"
+                  label="Search field"
+                  type="search"
+                  variant="filled"
+                />
 
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Upcoming Events

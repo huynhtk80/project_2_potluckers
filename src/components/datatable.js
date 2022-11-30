@@ -1,6 +1,7 @@
 import * as React from "react";
 import bson from "bson";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
@@ -102,7 +103,7 @@ export default function FullFeaturedCrudGrid({
     console.log(randomRecipe);
     const addRecipe = {
       recipeName: randomRecipe.recipes[0].title,
-      notes: randomRecipe.recipes[0].id,
+      link: randomRecipe.recipes[0].id,
     };
     console.log("add recipe", addRecipe);
     console.log({ ...addRecipe });
@@ -148,14 +149,13 @@ export default function FullFeaturedCrudGrid({
   };
 
   const columns = [
-    { field: "item", headerName: "Requested Item", flex: 0.5, editable: true },
+    { field: "item", headerName: "Requested", width: 70, editable: true },
     {
       field: "recipeName",
       headerName: "Recipe Name",
       flex: 0.5,
       type: "string",
       editable: true,
-      resizable: true,
     },
     {
       field: "responsible",
@@ -163,7 +163,6 @@ export default function FullFeaturedCrudGrid({
       flex: 0.5,
       type: "string",
       editable: true,
-      resizable: true,
     },
     {
       field: "notes",
@@ -171,6 +170,32 @@ export default function FullFeaturedCrudGrid({
       type: "string",
       flex: 1,
       editable: true,
+    },
+    {
+      field: "link",
+      headerName: "Potlucker Recipe",
+      width: 80,
+      editable: false,
+      renderCell: (params) => (
+        <>
+          {params.value ? (
+            <a
+              href={`../FullRecipe/${params.value}`}
+              className="btn btn--green"
+              style={{
+                paddingTop: "4px",
+                paddingBottom: "4px",
+                paddingLeft: "6px",
+                paddingRight: "6px",
+              }}
+            >
+              link{" "}
+            </a>
+          ) : (
+            ""
+          )}
+        </>
+      ),
     },
     {
       field: "actions",

@@ -32,6 +32,9 @@ export default class UserDetails extends Component {
       .then((data) => {
         console.log(data, "userData");
         this.setState({ userData: data.data });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }
   render() {

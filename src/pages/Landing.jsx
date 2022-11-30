@@ -24,7 +24,6 @@ import romellProfile from "../img/romell.jpg";
 import logoWhite from "../img/logowhite.png";
 import logo2White from "../img/logo2white.png";
 
-
 function Landing() {
   const [checked, setChecked] = useState(false);
 
@@ -538,8 +537,9 @@ function Landing() {
               <h3 className="heading-tertiary u-margin-bottom-small">
                 I had the best time ever!
               </h3>
+              <h1>Kshitija Shirsathe</h1>
               <p>
-                <h1>Kshitija Shirsathe</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -547,7 +547,10 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="https://www.linkedin.com/in/kshitija-shirsathe-095a2197/" className="btn btn--green">
+              <a
+                href="https://www.linkedin.com/in/kshitija-shirsathe-095a2197/"
+                className="btn btn--green"
+              >
                 Full Bio
               </a>
             </div>
@@ -568,8 +571,9 @@ function Landing() {
               <h3 className="heading-tertiary u-margin-bottom-small">
                 I had the best time ever!
               </h3>
+              <h1>Romell Bermundo</h1>
               <p>
-                <h1>Romell Bermundo</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -577,7 +581,10 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="https://www.linkedin.com/in/romellbermundo/" className="btn btn--green">
+              <a
+                href="https://www.linkedin.com/in/romellbermundo/"
+                className="btn btn--green"
+              >
                 Full Bio
               </a>
             </div>
@@ -598,8 +605,9 @@ function Landing() {
               <h3 className="heading-tertiary u-margin-bottom-small">
                 I had the best time ever!
               </h3>
+              <h1>Timothy Huynh</h1>
               <p>
-                <h1>Timothy Huynh</h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
                 consequatur ducimus quam nisi exercitationem omnis earum qui.
                 Aperiam, ipsum sapiente aspernatur libero repellat quis
@@ -607,7 +615,10 @@ function Landing() {
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
-              <a href="https://www.linkedin.com/in/timothy-huynh-yyc/" className="btn btn--green">
+              <a
+                href="https://www.linkedin.com/in/timothy-huynh-yyc/"
+                className="btn btn--green"
+              >
                 Full Bio
               </a>
             </div>
@@ -628,21 +639,21 @@ function Landing() {
               <h3 className="heading-tertiary u-margin-bottom-small">
                 The Best Group I've ever worked with.
               </h3>
+              <h1>Tyler Sartison</h1>
               <p>
-                <h1>Tyler Sartison</h1> This was a fun project to work on
-                because of the great people. I learned a lot during the process
-                and had fun along the way. What more could I have asked for?
-                Throughout the duration my focus was on the front end of the
-                Potlucker website. I used HTML 5, CSS, SCSS, JavaScrit, Node,
-                Terminal, GitHub, Iconfont and VsCode. Please view my full bio
-                at LinkedIn.
+                This was a fun project to work on because of the great people. I
+                learned a lot during the process and had fun along the way. What
+                more could I have asked for? Throughout the duration my focus
+                was on the front end of the Potlucker website. I used HTML 5,
+                CSS, SCSS, JavaScrit, Node, Terminal, GitHub, Iconfont and
+                VsCode. Please view my full bio at LinkedIn.
               </p>
             </div>
-            <div class="u-center-text u-margin-top-huge">
+            <div className="u-center-text u-margin-top-huge">
               <a
                 href="https://www.linkedin.com/in/tyler-sartison-3030172a/ "
                 target="_blank"
-                class="btn btn--green"
+                className="btn btn--green"
               >
                 Full Bio
               </a>
@@ -762,7 +773,7 @@ function Landing() {
               <a href="#" className="footer__link">
                 Advanced CSS and Sass
               </a>
-              . Copyright &copy; by Jonas Schmedtmann. 
+              . Copyright &copy; by Jonas Schmedtmann.
               {/* You are 100% allowed to
               use this webpage for both personal and commercial use, but NOT to
               claim it as your own design. A credit to the original author,
