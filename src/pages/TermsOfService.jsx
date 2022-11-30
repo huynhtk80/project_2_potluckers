@@ -356,7 +356,6 @@ function TermsOfUse() {
           </ul>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
