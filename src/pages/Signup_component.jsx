@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet';
 
 import kcheese from "../img/kcheese.png"
 
@@ -53,6 +54,9 @@ export default class SignUp extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <body className="root" />
+        </Helmet>
         <div className="signup-container">
           <form className="signup-form" onSubmit={this.handleSubmit}>
             <img src={kcheese} className="team-logo"/>
