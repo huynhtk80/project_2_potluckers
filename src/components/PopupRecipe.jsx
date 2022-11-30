@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import kWings from "../img/potlucker-kamikaze-wings.jpg";
 import { Link } from "react-router-dom";
 import "./PopupRecipe.css";
-import { getRecipeIngredients } from "../api/recipeAPIs";
 
 function PopupRecipe(props) {
   const [Ingredients, setIngredients] = useState();

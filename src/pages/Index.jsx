@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Index() {
   return (
-    <section className="section-tours">
+    <>
       <h1>Learn More About Potlucker</h1>
 
       <div className="row">
@@ -108,7 +108,7 @@ function Index() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
