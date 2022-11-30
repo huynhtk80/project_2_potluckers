@@ -9,7 +9,11 @@ function PlayingNavBar() {
   // let [name, setName] = useState();
 
   const [checked, setChecked] = useState(false);
-  const handleChange = (event) => {};
+
+  const handleChange = (event) => {
+    setChecked(false);
+  };
+
   return (
     <>
       <div className="navigationP">
