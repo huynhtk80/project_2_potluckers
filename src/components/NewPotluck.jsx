@@ -22,7 +22,6 @@ import UserContext from "./UserContext";
 
 function NewPotluck() {
   const navigate = useNavigate();
-  const { user, setUser } = React.useContext(UserContext);
 
   const [eventCreated, setEventCreated] = useState(false);
   const [choiceStyle, setChoiceStyle] = useState("Choice");
@@ -34,6 +33,20 @@ function NewPotluck() {
   const [eventPass, setEventPass] = useState();
   const [theme, setTheme] = useState("none");
   const [location, setLocation] = useState({ province: "" });
+  const { user, setUser } = React.useContext(UserContext);
+
+  useEffect(() => {
+    console.log(user.fname);
+    if (user) {
+      setOrganizerName(user.fname + " " + user.lname);
+      setOrganizerEmail(user.email);
+      console.log("here", user.fname);
+    }
+    console.log(organizerEmail);
+    console.log(organizerName);
+
+    return () => {};
+  }, [user]);
 
   const handleLocationInputChange = (e) => {
     const { name, value } = e.target;
@@ -97,6 +110,7 @@ function NewPotluck() {
             id="OrganizerName"
             label="Organizer Name"
             variant="outlined"
+            value={organizerName}
             defaultValue={user ? user.fname + " " + user.lname : ""}
             onChange={(e) => setOrganizerName(e.target.value)}
           />
@@ -104,6 +118,7 @@ function NewPotluck() {
             sx={{ minWidth: 300 }}
             id="OrganizerEmail"
             label="Organizer Email"
+            value={organizerEmail}
             defaultValue={user ? user.email : ""}
             variant="outlined"
             onChange={(e) => setOrganizerEmail(e.target.value)}
@@ -164,7 +179,7 @@ function NewPotluck() {
             variant="outlined"
             onChange={handleLocationInputChange}
           />
-          <FormControl sx={{ m: 1 }}>
+          <FormControl sx={{ m: 1, minWidth: 100 }}>
             <InputLabel id="select-label">Province</InputLabel>
             <Select
               labelId="select-label"
