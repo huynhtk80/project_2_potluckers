@@ -272,7 +272,7 @@ function Landing() {
                 <div className="card__details">
                   <ul>
                     <li>Serves: 6 - 8</li>
-                    <li>Skill: Begginer</li>
+                    <li>Skill: Beginner</li>
                     <li>Prep: Easy</li>
                     <li>Serve: Cold</li>
                     <li>Finger Food</li>

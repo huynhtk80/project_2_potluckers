@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
-import { Footer } from "../components/Footer";
 
 function PrivacyPolicy() {
   const [checked, setChecked] = useState(false);

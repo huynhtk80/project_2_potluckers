@@ -7,7 +7,7 @@ function Index() {
     <>
     <br />
     <div className="main-title">
-      <h1 className="heading-secondary" style={{ backgroundColor: "black", clear: "both" }}>Learn More About Potlucker</h1>
+      <h1 className="heading-secondary" style={{ backgroundColor: "black", clear: "both" }}>create awesome moments</h1>
     </div>
       <br />
       <br />
@@ -67,7 +67,7 @@ function Index() {
                   <p className="card__price-value">Marvelous!</p>
                 </div>
                 <a href="#popup8" className="btn btn--white">
-                  Create Event
+                  find events
                 </a>
               </div>
             </div>
@@ -96,7 +96,7 @@ function Index() {
                   <p className="card__price-value">Amazing!</p>
                 </div>
                 <a href="#popup9" className="btn btn--white">
-                  Learn More
+                  Create event
                 </a>
               </div>
             </div>
