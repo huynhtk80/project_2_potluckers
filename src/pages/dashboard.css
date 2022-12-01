@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 .card__description{
   font-size: 19px;
 }
@@ -50,8 +52,8 @@
   letter-spacing: 0.25px;
 }
 .title-main {
-  font-size: 30px;
-  font-family: "Trirong", serif;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 .footer-container .footer-body {
   font-size: 15px;
@@ -90,6 +92,7 @@
   color: #1d741b;
   margin-bottom: 30px;
   font-size: 25px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .team-logo {
@@ -105,3 +108,9 @@
 .main-title{
   text-align: center;
 }
+
+.sub-title{
+  text-align: left;
+  font-family: "Lato", sans-serif;
+}
+

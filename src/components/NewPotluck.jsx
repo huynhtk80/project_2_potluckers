@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { createNewPotluck } from "../api/potluckAPI";
+import "../pages/dashboard.css"
 
 import dayjs from "dayjs";
 import Alert from "@mui/material/Alert";
@@ -46,9 +47,9 @@ function NewPotluck() {
 
   return (
     <>
-      <div >
-        <h1 className="heading-secondary">New Potluck</h1></div>
-      <Box
+      <div className="title-main">
+        <h1 >Create Potluck</h1></div>
+      <Box className="box-field"
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },

@@ -37,7 +37,7 @@ function Index() {
                   </p>
                   <p className="card__price-value">Awesome!</p>
                 </div>
-                <a href="#popup7" className="btn btn--white">
+                <a href="/home/mealplanningrecipes" className="btn btn--white">
                   Find a Recipe
                 </a>
               </div>
@@ -66,7 +66,7 @@ function Index() {
                   <p className="card__description">Have a Party?</p>
                   <p className="card__price-value">Marvelous!</p>
                 </div>
-                <a href="#popup8" className="btn btn--white">
+                <a href="/home/existingevents" className="btn btn--white">
                   find events
                 </a>
               </div>
@@ -95,7 +95,7 @@ function Index() {
                   <p className="card__description">Have a Party?</p>
                   <p className="card__price-value">Amazing!</p>
                 </div>
-                <a href="#popup9" className="btn btn--white">
+                <a href="/home/planyourownevent" className="btn btn--white">
                   Create event
                 </a>
               </div>
