@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { createNewPotluck } from "../api/potluckAPI";
+import "../pages/dashboard.css";
 
 import dayjs from "dayjs";
 import Alert from "@mui/material/Alert";
@@ -65,8 +66,11 @@ function NewPotluck() {
 
   return (
     <>
-      <h1>New Potluck</h1>
+      <div className="title-main">
+        <h1>Create Potluck</h1>
+      </div>
       <Box
+        className="box-field"
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1 },
@@ -198,8 +202,22 @@ function NewPotluck() {
             renderInput={(params) => <TextField {...params} />}
           />
         </LocalizationProvider>
-
-        <p>Can People choose what to bring:</p>
+        <TextField
+          id="ExpectedNumber"
+          label="Expected Number of Attendees"
+          variant="outlined"
+          onChange={(e) => setExpectedNumber(e.target.value)}
+        />
+        <br></br>
+        <TextField
+          sx={{ m: 1, width: "10ch" }}
+          id="Theme"
+          label="Theme"
+          variant="outlined"
+          onChange={(e) => setTheme(e.target.value)}
+        />
+        <br></br>
+        <label>Food People can bring:</label>
         <ToggleButtonGroup
           color="primary"
           value={choiceStyle}

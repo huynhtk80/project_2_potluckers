@@ -51,19 +51,19 @@ function PlayingNavBar() {
                   to="/home/PlanYourOwnEvent"
                   className="navigationP__link"
                   onClick={handleChange}
-                >
+                  >
                   Create Event
                 </NavLink>
               </li>
             ) : (
               ""
-            )}
+              )}
             <li className="navigationP__item">
               <NavLink
                 to="/home/ExistingEvents"
                 className="navigationP__link"
                 onClick={handleChange}
-              >
+                >
                 Existing Events
               </NavLink>
             </li>
@@ -72,7 +72,7 @@ function PlayingNavBar() {
                 to="/home/MealPlanningRecipes"
                 className="navigationP__link"
                 onClick={handleChange}
-              >
+                >
                 Find Recipes
               </NavLink>
             </li>
@@ -81,7 +81,7 @@ function PlayingNavBar() {
                 to="/home/Aboutus"
                 className="navigationP__link"
                 onClick={handleChange}
-              >
+                >
                 About Us
               </NavLink>
             </li>
@@ -90,26 +90,30 @@ function PlayingNavBar() {
                 to="/sign-up"
                 className="navigationP__link"
                 onClick={handleChange}
-              >
+                >
                 Register/Login
               </NavLink>
             </li>
+              {loginStatus ? (
             <li className="navigationP__item">
               <NavLink
                 to="/home/UserDetails"
                 className="navigationP__link"
                 onClick={handleChange}
-              >
+                >
                 Settings
               </NavLink>
             </li>
+                ) : (
+                  ""
+                )}
           </ul>
         </nav>
       </div>
       <div className="movedown">
         <Outlet />
       </div>
-      <div style={{ marginTop: "50%", clear: "both" }}>
+      <div style={{ marginTop: "25%", clear: "both" }}>
         <Footer />
       </div>
     </>

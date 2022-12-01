@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
+import "../pages/dashboard.css";
 import Alert from "@mui/material/Alert";
 import SearchPotluckAuto from "../components/SearchPotluckAuto";
 import { useNavigate } from "react-router-dom";
@@ -32,47 +33,24 @@ function ExistingEventsLanding() {
           <div className="one">
             <h3 className="title flex-title">
               <span className="title-main">
-                <h2 className="heading-secondary u-margin-bottom-small">
-                  Existing Events
-                </h2>
-
+                <h1>Existing Events</h1>
+                <br />
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Find an Event
                 </h3>
-                <Box
-                  component="form"
-                  sx={{
-                    "& .MuiTextField-root": { m: 1 },
-                  }}
-                  Validate
-                  autoComplete="off"
+                <TextField
+                  id="filled-search"
+                  label="Search field"
+                  type="search"
+                  variant="filled"
+                />
+                <a
+                  onClick={handleClick}
+                  className="btn btn--green"
+                  style={{ padding: "10px" }}
                 >
-                  <SearchPotluckAuto setPotluck={setPotluck} />
-                  <TextField
-                    id="eventPass"
-                    label="EventPass"
-                    type="number"
-                    variant="outlined"
-                    onChange={(e) => setEventPass(e.target.value)}
-                  />
-                  <a
-                    onClick={handleClick}
-                    className="btn btn--green"
-                    style={{ padding: "10px" }}
-                  >
-                    Go to Event
-                  </a>
-                </Box>
-                {errorState && (
-                  <Alert severity="warning">
-                    Potluck and event pass don't match, try again.
-                  </Alert>
-                )}
-                {eventFound && (
-                  <Alert severity="success">
-                    Event Found, lets join the planning!
-                  </Alert>
-                )}
+                  Search for event
+                </a>
 
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Upcoming Events

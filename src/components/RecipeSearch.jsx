@@ -17,7 +17,7 @@ function RecipeSearch() {
   };
 
   return (
-    <div className="formContainer">
+    <div className="formContainer search-container">
       <form className="searchbox" onSubmit={handleSubmit}>
         <label>Search: </label>
         <input
@@ -43,7 +43,7 @@ function RecipeSearch() {
             onChange={setSelectedCuisines}
           />
         </div> */}
-        <button>submit</button>
+        <button className="btn btn--green search-btn">submit</button>
       </form>
 
       {results && <h2>Search Results</h2>}

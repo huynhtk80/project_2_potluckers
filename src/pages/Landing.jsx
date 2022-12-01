@@ -272,7 +272,7 @@ function Landing() {
                 <div className="card__details">
                   <ul>
                     <li>Serves: 6 - 8</li>
-                    <li>Skill: Begginer</li>
+                    <li>Skill: Beginner</li>
                     <li>Prep: Easy</li>
                     <li>Serve: Cold</li>
                     <li>Finger Food</li>
@@ -567,15 +567,11 @@ function Landing() {
             </figure>
             <div className="story__text">
               <h3 className="heading-tertiary u-margin-bottom-small">
-                I had the best time ever!
+                Have fun and have friends!
               </h3>
               <h1>Romell Bermundo</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
+              I love steak and cheese. So, when I learned that my team is going to choose cheese as part of our team name, I was all in. My name is Romell and I am a designer by heart. I love designing artistically but also, I love designing systems to make sure that everything is efficient and user-friendly. My core values are design, coding, food, and having fun. Enjoy visiting our site. 
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
@@ -763,7 +759,7 @@ function Landing() {
           </div>
           <div className="col-1-of-2">
             <p className="footer__copyright">
-              Designed by{" "}
+              Front-page designed by{" "}
               <a href="#" className="footer__link">
                 Jonas Schmedtmann
               </a>{" "}
