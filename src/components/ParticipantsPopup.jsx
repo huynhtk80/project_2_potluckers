@@ -27,11 +27,14 @@ function ParticipantsPopup(props) {
   const handleRemoveClick = () => {
     const oldPotluck = props.potluck;
     const newP = oldPotluck.participants.filter((p) => p.email !== pEmail);
-    oldPotluck.participants = newP;
-    props.setPotluck(oldPotluck);
-    setPEmail("");
-    setPName("");
-    updateExistingPotluck(props.potluck);
+    if (newP.length !== oldPotluck.participants.length) {
+      oldPotluck.participants = newP;
+      oldPotluck.numberAttending = oldPotluck.numberAttending - 1;
+      props.setPotluck(oldPotluck);
+      setPEmail("");
+      setPName("");
+      updateExistingPotluck(props.potluck);
+    }
   };
 
   return props.trigger ? (
