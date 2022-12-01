@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import "../pages/dashboard.css";
 import Alert from "@mui/material/Alert";
 import SearchPotluckAuto from "../components/SearchPotluckAuto";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+import { getPotluckByEmail } from "../api/potluckAPI";
+import UserContext from "../components/UserContext";
+import { Link } from "react-router-dom";
 
 function ExistingEventsLanding() {
   const navigate = useNavigate();
@@ -12,6 +15,20 @@ function ExistingEventsLanding() {
   const [errorState, setErrorState] = useState(false);
   const [eventFound, setEventFound] = useState(false);
   const [eventPass, setEventPass] = useState(false);
+
+  const { user, setUser } = React.useContext(UserContext);
+
+  const [yourPotlucks, setYourPotlucks] = useState();
+
+  useEffect(() => {
+    const fetchPotluck = async () => {
+      const fetchedPotluck = await getPotluckByEmail(user.email);
+      setYourPotlucks(fetchedPotluck);
+    };
+    fetchPotluck();
+
+    return () => {};
+  }, [user]);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -72,14 +89,28 @@ function ExistingEventsLanding() {
                     Event Found, lets join the planning!
                   </Alert>
                 )}
-
+                <br></br>
                 <h3 className="heading-tertiary u-margin-bottom-small">
-                  Upcoming Events
+                  Events You're Organizing
+                  {yourPotlucks && (
+                    <>
+                      <ul>
+                        {yourPotlucks.map((p) => (
+                          <li>
+                            <Link to={`/home/ExistingEvents/${p._id}`}>
+                              {p.title}
+                            </Link>{" "}
+                            - {Date(p.eventDate).toString()}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </h3>
 
-                <h3 className="heading-tertiary u-margin-bottom-small">
+                {/* <h3 className="heading-tertiary u-margin-bottom-small">
                   Previous Events
-                </h3>
+                </h3> */}
               </span>
             </h3>
           </div>

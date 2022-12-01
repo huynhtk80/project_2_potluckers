@@ -4,12 +4,14 @@ import { getRecipeById } from "../api/recipeAPIs";
 
 function FullRecipe() {
   const [recipe, setRecipe] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
         const fetchedInformation = await getRecipeById(id);
+        console.log("fetch", fetchedInformation);
         setRecipe(fetchedInformation);
       } catch (error) {
         console.log(error);
@@ -19,10 +21,7 @@ function FullRecipe() {
 
     return () => {};
   }, []);
-  console.log(recipe);
-  if (!recipe) {
-    return <h2>Not valid recipe id</h2>;
-  }
+
   return (
     <>
       <h1>{recipe.title}</h1>

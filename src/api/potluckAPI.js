@@ -32,3 +32,13 @@ export const getAllPotlucks = async () => {
   const allPotlucks = await response.data;
   return allPotlucks;
 };
+
+export const getPotluckByEmail = async (email) => {
+  const response = await axios({
+    method: "get",
+    url: `/potluck/byemail/${email}`,
+  });
+  const potluck = await response.data;
+  console.log("Potluck at API:", potluck);
+  return potluck;
+};
