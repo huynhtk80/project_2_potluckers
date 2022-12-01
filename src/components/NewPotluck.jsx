@@ -202,22 +202,9 @@ function NewPotluck() {
             renderInput={(params) => <TextField {...params} />}
           />
         </LocalizationProvider>
-        <TextField
-          id="ExpectedNumber"
-          label="Expected Number of Attendees"
-          variant="outlined"
-          onChange={(e) => setExpectedNumber(e.target.value)}
-        />
-        <br></br>
-        <TextField
-          sx={{ m: 1, width: "10ch" }}
-          id="Theme"
-          label="Theme"
-          variant="outlined"
-          onChange={(e) => setTheme(e.target.value)}
-        />
         <br></br>
         <label>Food People can bring:</label>
+        <br></br>
         <ToggleButtonGroup
           color="primary"
           value={choiceStyle}

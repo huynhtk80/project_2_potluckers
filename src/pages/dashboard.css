@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-.card__description{
+.card__description {
   font-size: 19px;
 }
 
 .movedown {
   margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 .aboutus-container {
   width: 90%;
@@ -53,7 +56,7 @@
 }
 .title-main {
   font-size: 20px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .footer-container .footer-body {
   font-size: 15px;
@@ -92,7 +95,7 @@
   color: #1d741b;
   margin-bottom: 30px;
   font-size: 25px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .team-logo {
@@ -105,17 +108,17 @@
   background-size: 3000px;
 }
 
-.main-title{
+.main-title {
   text-align: center;
 }
 
-.sub-title{
+.sub-title {
   text-align: left;
   font-family: "Lato", sans-serif;
 }
 
-.search-btn{
-margin-left: 20px;
+.search-btn {
+  margin-left: 20px;
 }
 
 .search-container {
@@ -124,5 +127,5 @@ margin-left: 20px;
 }
 
 .searchbox {
-  border-radius:10px;
+  border-radius: 10px;
 }

@@ -38,19 +38,40 @@ function ExistingEventsLanding() {
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Find an Event
                 </h3>
-                <TextField
-                  id="filled-search"
-                  label="Search field"
-                  type="search"
-                  variant="filled"
-                />
-                <a
-                  onClick={handleClick}
-                  className="btn btn--green"
-                  style={{ padding: "10px" }}
+                <Box
+                  component="form"
+                  sx={{
+                    "& .MuiTextField-root": { m: 1 },
+                  }}
+                  Validate
+                  autoComplete="off"
                 >
-                  Search for event
-                </a>
+                  <SearchPotluckAuto setPotluck={setPotluck} />
+                  <TextField
+                    id="eventPass"
+                    label="EventPass"
+                    type="number"
+                    variant="outlined"
+                    onChange={(e) => setEventPass(e.target.value)}
+                  />
+                  <a
+                    onClick={handleClick}
+                    className="btn btn--green"
+                    style={{ padding: "10px" }}
+                  >
+                    Go to Event
+                  </a>
+                </Box>
+                {errorState && (
+                  <Alert severity="warning">
+                    Potluck and event pass don't match, try again.
+                  </Alert>
+                )}
+                {eventFound && (
+                  <Alert severity="success">
+                    Event Found, lets join the planning!
+                  </Alert>
+                )}
 
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Upcoming Events
