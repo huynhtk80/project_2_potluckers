@@ -106,7 +106,7 @@ function Landing() {
             <span className="heading-primary--sub">Where Awesome Happens</span>
           </h1>
 
-          <Link to="/home" className="btn btn--white btn--white:hover">
+          <Link to="/sign-up" className="btn btn--white btn--white:hover">
             Sign in / Sign Up
           </Link>
         </div>
@@ -444,7 +444,7 @@ function Landing() {
         </div>
 
         <div className="u-center-text u-margin-top-huge">
-          <Link to="/home" className="btn btn--green">
+          <Link to="/sign-up" className="btn btn--green">
             Sign In / Sign Up
           </Link>
         </div>
@@ -571,7 +571,13 @@ function Landing() {
               </h3>
               <h1>Romell Bermundo</h1>
               <p>
-              I love steak and cheese. So, when I learned that my team is going to choose cheese as part of our team name, I was all in. My name is Romell and I am a designer by heart. I love designing artistically but also, I love designing systems to make sure that everything is efficient and user-friendly. My core values are design, coding, food, and having fun. Enjoy visiting our site. 
+                I love steak and cheese. So, when I learned that my team is
+                going to choose cheese as part of our team name, I was all in.
+                My name is Romell and I am a designer by heart. I love designing
+                artistically but also, I love designing systems to make sure
+                that everything is efficient and user-friendly. My core values
+                are design, coding, food, and having fun. Enjoy visiting our
+                site.
               </p>
             </div>
             <div className="u-center-text u-margin-top-huge">
@@ -809,7 +815,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -847,7 +853,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -885,7 +891,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -923,7 +929,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -962,7 +968,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -1000,7 +1006,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -1038,7 +1044,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -1077,7 +1083,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
@@ -1116,7 +1122,7 @@ function Landing() {
               lacinia quis vel eros donec. Sit amet facilisis magna etiam.
               Imperdiet sed euismod nisi porta.
             </p>
-            <Link to="/home" className="btn btn--green">
+            <Link to="/sign-up" className="btn btn--green">
               Sign In / Sign Up
             </Link>
           </div>
