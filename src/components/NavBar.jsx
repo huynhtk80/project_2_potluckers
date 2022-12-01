@@ -109,7 +109,7 @@ function PlayingNavBar() {
       <div className="movedown">
         <Outlet />
       </div>
-      <div style={{ marginTop: "50%", clear: "both" }}>
+      <div style={{ marginTop: "25%", clear: "both" }}>
         <Footer />
       </div>
     </>
