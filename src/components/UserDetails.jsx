@@ -46,6 +46,7 @@ export default class UserDetails extends Component {
         <h1>Name: {this.state.userData.fname}</h1>
         <h1>Email: {this.state.userData.email}</h1>
         <h1>Role: {this.state.userData.role === 1 ? "Admin": "Registered User"}</h1>
+        <h1>Date: {Date(Date.now)}</h1>
 
 
         <br/>
