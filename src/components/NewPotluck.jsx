@@ -36,7 +36,6 @@ function NewPotluck() {
   const { user, setUser } = React.useContext(UserContext);
 
   useEffect(() => {
-    console.log(user.fname);
     if (user) {
       setOrganizerName(user.fname + " " + user.lname);
       setOrganizerEmail(user.email);
@@ -91,8 +90,8 @@ function NewPotluck() {
         sx={{
           "& .MuiTextField-root": { m: 1 },
         }}
-        Validate
-        autoComplete="off"
+        noValidate
+        autoComplete="on"
       >
         <TextField
           sx={{ minWidth: 600 }}
@@ -111,7 +110,7 @@ function NewPotluck() {
             label="Organizer Name"
             variant="outlined"
             value={organizerName}
-            defaultValue={user ? user.fname + " " + user.lname : ""}
+            defaultValue={" "}
             onChange={(e) => setOrganizerName(e.target.value)}
           />
           <TextField
@@ -119,7 +118,7 @@ function NewPotluck() {
             id="OrganizerEmail"
             label="Organizer Email"
             value={organizerEmail}
-            defaultValue={user ? user.email : ""}
+            defaultValue={" "}
             variant="outlined"
             onChange={(e) => setOrganizerEmail(e.target.value)}
           />
@@ -216,7 +215,7 @@ function NewPotluck() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateTimePicker
             label="Event Date&Time"
-            disablePast="true"
+            disablePast={true}
             value={dateValue}
             onChange={(e) => setDateValue(dayjs(e).format())}
             renderInput={(params) => <TextField {...params} />}
