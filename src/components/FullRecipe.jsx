@@ -22,6 +22,10 @@ function FullRecipe() {
     return () => {};
   }, []);
 
+  if (!recipe) {
+    return <h2>Loading</h2>;
+  }
+
   return (
     <>
       <h1>{recipe.title}</h1>
