@@ -102,7 +102,7 @@ function NewPotluck() {
         />
         <br></br>
         <label>Food People can bring:</label>
-        <ToggleButtonGroup
+        <ToggleButtonGroup className="search-btn"
           color="primary"
           value={choiceStyle}
           exclusive

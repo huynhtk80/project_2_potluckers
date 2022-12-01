@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
+import "../pages/dashboard.css"
 
 function ExistingEventsLanding() {
   const handleClick = (e) => {
@@ -15,24 +16,27 @@ function ExistingEventsLanding() {
                 <h1 >
                   Existing Events
                 </h1>
-
+<br/>
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Find an Event
                 </h3>
-                <TextField
+                <div >
+                <TextField 
                   id="filled-search"
                   label="Search field"
                   type="search"
                   variant="filled"
                 />
+
                 <a
                   onClick={handleClick}
-                  className="btn btn--green"
+                  className="btn btn--green search-btn"
                   style={{ padding: "10px" }}
                 >
                   Search for event
                 </a>
-
+                </div>
+                <br/>
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Upcoming Events
                 </h3>
