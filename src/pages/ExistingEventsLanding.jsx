@@ -12,9 +12,9 @@ function ExistingEventsLanding() {
           <div className="one">
             <h3 className="title flex-title">
               <span className="title-main">
-                <h2 className="heading-secondary u-margin-bottom-small">
+                <h1 >
                   Existing Events
-                </h2>
+                </h1>
 
                 <h3 className="heading-tertiary u-margin-bottom-small">
                   Find an Event

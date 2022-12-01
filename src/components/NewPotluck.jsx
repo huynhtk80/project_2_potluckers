@@ -46,7 +46,8 @@ function NewPotluck() {
 
   return (
     <>
-      <div>New Potluck</div>
+      <div >
+        <h1 className="heading-secondary">New Potluck</h1></div>
       <Box
         component="form"
         sx={{

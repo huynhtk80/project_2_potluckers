@@ -7,7 +7,7 @@ function Index() {
     <>
     <br />
     <div className="main-title">
-      <h1 className="heading-secondary" style={{ backgroundColor: "black", clear: "both" }}>create awesome moments</h1>
+      <h1 className="heading-secondary">create awesome moments</h1>
     </div>
       <br />
       <br />
