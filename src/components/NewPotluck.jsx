@@ -179,7 +179,7 @@ function NewPotluck() {
             variant="outlined"
             onChange={handleLocationInputChange}
           />
-          <FormControl sx={{ m: 1 }}>
+          <FormControl sx={{ m: 1, minWidth: 100 }}>
             <InputLabel id="select-label">Province</InputLabel>
             <Select
               labelId="select-label"
