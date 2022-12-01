@@ -70,11 +70,11 @@ function PopupRecipe(props) {
               </p>
             ))}{" "}
           </div>
-          <div className="popupR__bottomlink">
+          {/* <div className="popupR__bottomlink">
             <Link to="/home" className="btn btn--green">
               Save to Favorites
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
