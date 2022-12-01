@@ -12,10 +12,12 @@ export default class Login extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleSubmit(e) {
     e.preventDefault();
     const { email, password } = this.state;
-    console.log(email, password);
+
+    // console.log(email, password);
     fetch("http://localhost:4000/auth/login-user", {
       method: "POST",
       crossDomain: true,
@@ -39,6 +41,7 @@ export default class Login extends Component {
         }
       });
   }
+
   render() {
     return (
       <>

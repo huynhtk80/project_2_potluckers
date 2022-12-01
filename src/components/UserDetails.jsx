@@ -12,7 +12,7 @@ export default class UserDetails extends Component {
   handleclick(event) {
     // event.preventDefault();
     localStorage.removeItem("token");
-    window.location.href = "/";
+    window.location.href = "/home";
   }
 
   componentDidMount() {

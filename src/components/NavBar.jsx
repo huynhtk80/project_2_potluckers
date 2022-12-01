@@ -1,12 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
 import { Footer } from "./Footer";
+import UserContext from "./UserContext";
 
 function PlayingNavBar() {
   let [loginStatus, setLoginStatus] = useState(true);
-  // let [name, setName] = useState();
+  const { user, setUser } = React.useContext(UserContext);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/auth/userData", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        token: window.localStorage.getItem("token"),
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userData");
+        setUser(data.data);
+        console.log(user.fname);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    return () => {};
+  }, []);
 
   const [checked, setChecked] = useState(false);
 
@@ -45,25 +72,25 @@ function PlayingNavBar() {
                 Home
               </NavLink>
             </li>
-            {loginStatus ? (
+            {user ? (
               <li className="navigationP__item">
                 <NavLink
                   to="/home/PlanYourOwnEvent"
                   className="navigationP__link"
                   onClick={handleChange}
-                  >
+                >
                   Create Event
                 </NavLink>
               </li>
             ) : (
               ""
-              )}
+            )}
             <li className="navigationP__item">
               <NavLink
                 to="/home/ExistingEvents"
                 className="navigationP__link"
                 onClick={handleChange}
-                >
+              >
                 Existing Events
               </NavLink>
             </li>
@@ -72,7 +99,7 @@ function PlayingNavBar() {
                 to="/home/MealPlanningRecipes"
                 className="navigationP__link"
                 onClick={handleChange}
-                >
+              >
                 Find Recipes
               </NavLink>
             </li>
@@ -81,32 +108,36 @@ function PlayingNavBar() {
                 to="/home/Aboutus"
                 className="navigationP__link"
                 onClick={handleChange}
-                >
+              >
                 About Us
               </NavLink>
             </li>
-            <li className="navigationP__item">
-              <NavLink
-                to="/sign-up"
-                className="navigationP__link"
-                onClick={handleChange}
+            {!user ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/sign-up"
+                  className="navigationP__link"
+                  onClick={handleChange}
                 >
-                Register/Login
-              </NavLink>
-            </li>
-              {loginStatus ? (
-            <li className="navigationP__item">
-              <NavLink
-                to="/home/UserDetails"
-                className="navigationP__link"
-                onClick={handleChange}
+                  Register/Login
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
+            {user ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/home/UserDetails"
+                  className="navigationP__link"
+                  onClick={handleChange}
                 >
-                Settings
-              </NavLink>
-            </li>
-                ) : (
-                  ""
-                )}
+                  Settings
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </nav>
       </div>
