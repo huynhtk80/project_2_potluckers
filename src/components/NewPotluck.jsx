@@ -17,9 +17,12 @@ import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import userEvent from "@testing-library/user-event";
+import UserContext from "./UserContext";
 
 function NewPotluck() {
   const navigate = useNavigate();
+  const { user, setUser } = React.useContext(UserContext);
 
   const [eventCreated, setEventCreated] = useState(false);
   const [choiceStyle, setChoiceStyle] = useState("Choice");
@@ -94,12 +97,14 @@ function NewPotluck() {
             id="OrganizerName"
             label="Organizer Name"
             variant="outlined"
+            defaultValue={user ? user.fname + " " + user.lname : ""}
             onChange={(e) => setOrganizerName(e.target.value)}
           />
           <TextField
             sx={{ minWidth: 300 }}
             id="OrganizerEmail"
             label="Organizer Email"
+            defaultValue={user ? user.email : ""}
             variant="outlined"
             onChange={(e) => setOrganizerEmail(e.target.value)}
           />
