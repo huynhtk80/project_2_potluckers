@@ -53,8 +53,9 @@ function ExistingEvents() {
               <a
                 onClick={() => setParticipantPopup(true)}
                 className="btn btn--green"
+                style={{ padding: "7px", margin: "5px" }}
               >
-                See who's coming!
+                Let them know you are coming
               </a>
               <FullFeaturedCrudGrid
                 setPotluck={setPotluck}

@@ -63,7 +63,7 @@ function RecipeCard({ recipe }) {
       <PopupRecipe
         trigger={buttonPopup}
         setTrigger={setButtonPopup}
-        recipe={recipe}
+        id={recipe.id}
       />
     </>
   );

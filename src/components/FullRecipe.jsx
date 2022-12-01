@@ -29,9 +29,19 @@ function FullRecipe() {
       <p>{recipe.id}</p>
       <img src={recipe.image} alt="Recipe Photo"></img>
       <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
+      <br></br>
+      <h2>Instructions</h2>
       {recipe.analyzedInstructions[0].steps.map((instructions, index) => (
         <p>
           {index + 1}. {instructions.step}
+        </p>
+      ))}
+      <br></br>
+      <h2>Ingredients</h2>
+      {recipe.extendedIngredients.map((ingredients, index) => (
+        <p>
+          {index + 1}. {ingredients.name} - {ingredients.measures.metric.amount}{" "}
+          {ingredients.measures.metric.unitLong}
         </p>
       ))}
     </>
