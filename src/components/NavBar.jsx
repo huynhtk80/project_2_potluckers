@@ -10,7 +10,7 @@ function PlayingNavBar() {
   const { user, setUser } = React.useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/auth/userData", {
+    fetch("/auth/userData", {
       method: "POST",
       crossDomain: true,
       headers: {

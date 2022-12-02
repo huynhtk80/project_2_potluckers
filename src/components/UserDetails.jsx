@@ -16,7 +16,7 @@ export default class UserDetails extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000/auth/userData", {
+    fetch("/auth/userData", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -41,16 +41,19 @@ export default class UserDetails extends Component {
     return (
       <div>
         <div className="title-main">
-            <h1>Your Details</h1>
-          </div>
+          <h1>Your Details</h1>
+        </div>
         <h1>Name: {this.state.userData.fname}</h1>
         <h1>Email: {this.state.userData.email}</h1>
-        <h1>Role: {this.state.userData.role === 1 ? "Admin": "Registered User"}</h1>
+        <h1>
+          Role: {this.state.userData.role === 1 ? "Admin" : "Registered User"}
+        </h1>
         <h1>Date: {Date(Date.now)}</h1>
 
-
-        <br/>
-        <button className="btn btn--green" onClick={this.handleclick}>Signout</button>
+        <br />
+        <button className="btn btn--green" onClick={this.handleclick}>
+          Signout
+        </button>
       </div>
     );
   }

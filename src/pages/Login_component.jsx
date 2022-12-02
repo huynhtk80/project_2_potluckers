@@ -18,7 +18,7 @@ export default class Login extends Component {
     const { email, password } = this.state;
 
     // console.log(email, password);
-    fetch("http://localhost:4000/auth/login-user", {
+    fetch("/auth/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {
