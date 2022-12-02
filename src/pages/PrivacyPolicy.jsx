@@ -12,7 +12,7 @@ function PrivacyPolicy() {
   return (
     <>
       <div className="footer-container">
-        <div className="navigationP">
+        {/* <div className="navigationP">
           <input
             type="checkbox"
             className="navigationP__checkbox"
@@ -43,7 +43,7 @@ function PrivacyPolicy() {
               </li>
             </ul>
           </nav>
-        </div>
+        </div> */}
         <div className="footer-body">
           <h1>Privacy Policy</h1>
           <p>Last updated: November 28, 2022</p>
