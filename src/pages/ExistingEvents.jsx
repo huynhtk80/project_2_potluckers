@@ -50,6 +50,15 @@ function ExistingEvents() {
               <p>{potluck.location && potluck.location.postalcode}</p>
               <p>Anticipated Attendees: {potluck.numberExpected}</p>
               <p>Confirmed Attendees: {potluck.numberAttending}</p>
+              <p>
+                Share this link to access potluck:
+                <a
+                  href={`https://www.potlucker.ca/home/ExistingEvents/${potluck._id}`}
+                  target="_blank"
+                >
+                  www.potlucker.ca/home/ExistingEvents/{potluck._id}
+                </a>
+              </p>
               <a
                 onClick={() => setParticipantPopup(true)}
                 className="btn btn--green"
