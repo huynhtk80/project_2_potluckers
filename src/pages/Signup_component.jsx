@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Helmet } from 'react-helmet';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 
-import kcheese from "../img/kcheese.png"
-
+import kcheese from "../img/kcheese.png";
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -18,37 +17,37 @@ export default class SignUp extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(e) {
-    try{e.preventDefault();
-    const { fname, lname, email, password } = this.state;
-    console.log(fname, lname, email, password);
-    fetch("http://localhost:4000/auth/register", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        fname,
-        email,
-        lname,
-        password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status == "ok") {
-          alert("Signup successful");
-          toast.success("Signed up successfully, please Login!")
-          window.location.href = "./sign-in";
-        }
-      });
-    }catch(err){
-      console.log('Error')
-      toast.error('Error')
-
+    try {
+      e.preventDefault();
+      const { fname, lname, email, password } = this.state;
+      // console.log(fname, lname, email, password);
+      fetch("/auth/register", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          fname,
+          email,
+          lname,
+          password,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userRegister");
+          if (data.status === "ok") {
+            alert("Signup successful");
+            toast.success("Signed up successfully, please Login!");
+            window.location.href = "./sign-in";
+          }
+        });
+    } catch (err) {
+      console.log("Error");
+      toast.error("Error");
     }
   }
   render() {
@@ -59,8 +58,8 @@ export default class SignUp extends Component {
         </Helmet>
         <div className="signup-container">
           <form className="signup-form" onSubmit={this.handleSubmit}>
-            <img src={kcheese} className="team-logo"/>
-          <h2 className="signup-label">Sign Up</h2>
+            <img src={kcheese} className="team-logo" alt="kcheese logo" />
+            <h2 className="signup-label">Sign Up</h2>
 
             <div className="form-outline">
               {/* <label>First name</label> */}

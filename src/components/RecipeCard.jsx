@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import theImage from "../img/potlucker-chocolate-cake.jpg";
+import React, { useState } from "react";
 import "./recipecard.css";
-import { Link } from "react-router-dom";
 import PopupRecipe from "./PopupRecipe";
-import { getRecipeIngredients } from "../api/recipeAPIs";
 
 function RecipeCard({ recipe }) {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -66,7 +63,7 @@ function RecipeCard({ recipe }) {
       <PopupRecipe
         trigger={buttonPopup}
         setTrigger={setButtonPopup}
-        recipe={recipe}
+        id={recipe.id}
       />
     </>
   );

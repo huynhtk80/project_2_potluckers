@@ -1,14 +1,46 @@
-import React, { useState } from "react";
-import "./PlayingNavBar.css";
+import React, { useEffect, useState } from "react";
+import "./NavBar.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import longLogo from "../img/PotluckerBlackLandscape.png";
+import { Footer } from "./Footer";
+import UserContext from "./UserContext";
 
 function PlayingNavBar() {
-  let [loginStatus, setLoginStatus] = useState(false);
+  let [loginStatus, setLoginStatus] = useState(true);
+  const { user, setUser } = React.useContext(UserContext);
+
+  useEffect(() => {
+    fetch("/auth/userData", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        token: window.localStorage.getItem("token"),
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userData");
+        setUser(data.data);
+        console.log(user.fname);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    return () => {};
+  }, []);
+
   const [checked, setChecked] = useState(false);
+
   const handleChange = (event) => {
     setChecked(false);
   };
+
   return (
     <>
       <div className="navigationP">
@@ -40,15 +72,19 @@ function PlayingNavBar() {
                 Home
               </NavLink>
             </li>
-            <li className="navigationP__item">
-              <NavLink
-                to="/home/PlanYourOwnEvent"
-                className="navigationP__link"
-                onClick={handleChange}
-              >
-                Create Event
-              </NavLink>
-            </li>
+            {user ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/home/PlanYourOwnEvent"
+                  className="navigationP__link"
+                  onClick={handleChange}
+                >
+                  Create Event
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
             <li className="navigationP__item">
               <NavLink
                 to="/home/ExistingEvents"
@@ -76,29 +112,40 @@ function PlayingNavBar() {
                 About Us
               </NavLink>
             </li>
-            <li className="navigationP__item">
-              <NavLink
-                to="/sign-up"
-                className="navigationP__link"
-                onClick={handleChange}
-              >
-                Register/Login
-              </NavLink>
-            </li>
-            <li className="navigationP__item">
-              <NavLink
-                to="/home/UserDetails"
-                className="navigationP__link"
-                onClick={handleChange}
-              >
-                Settings
-              </NavLink>
-            </li>
+            {!user ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/sign-up"
+                  className="navigationP__link"
+                  onClick={handleChange}
+                >
+                  Register/Login
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
+            {user ? (
+              <li className="navigationP__item">
+                <NavLink
+                  to="/home/UserDetails"
+                  className="navigationP__link"
+                  onClick={handleChange}
+                >
+                  Settings
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </nav>
       </div>
       <div className="movedown">
         <Outlet />
+      </div>
+      <div style={{ marginTop: "25%", clear: "both" }}>
+        <Footer />
       </div>
     </>
   );

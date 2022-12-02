@@ -8,30 +8,86 @@ function ParticipantsPopup(props) {
   const [pName, setPName] = useState();
   const [pEmail, setPEmail] = useState();
 
+  const [validations, setValidations] = React.useState({
+    ParticipantEmail: "",
+  });
+
+  const [errorState, setErrorState] = React.useState({
+    ParticipantEmail: false,
+  });
+
+  const validateOne = (e) => {
+    const { name, value } = e.target;
+    let message = "";
+    let error = false;
+
+    if (!value) {
+      message = `${name} is required`;
+      error = true;
+    }
+
+    if (value && name === "ParticipantEmail" && !/\S+@\S+\.\S+/.test(value)) {
+      message = "Email format must be as example@mail.com";
+      error = true;
+    }
+
+    setValidations({ ...validations, [name]: message });
+    setErrorState({ ...errorState, [name]: error });
+  };
+
+  const validateAll = () => {
+    const validation = { ParticipantEmail: "" };
+
+    let isValid = true;
+
+    if (!pEmail) {
+      validation.ParticipantEmail = "Email is required";
+      setErrorState({ ...errorState, ParticipantEmail: true });
+      isValid = false;
+    }
+
+    if (pEmail && !/\S+@\S+\.\S+/.test(pEmail)) {
+      validation.ParticipantEmail = "Email format must be as example@mail.com";
+      setErrorState({ ...errorState, ParticipantEmail: true });
+      isValid = false;
+    }
+
+    if (!isValid) {
+      setValidations(validation);
+    }
+
+    return isValid;
+  };
+
   const handleClick = () => {
-    const oldPotluck = props.potluck;
-    console.log("curent potluck", oldPotluck);
-    oldPotluck.participants.push({
-      name: pName,
-      email: pEmail,
-      attending: true,
-    });
-    console.log("should be newParticipants:", oldPotluck);
-    props.setPotluck(oldPotluck);
-    console.log("the potluck", props.potluck);
-    setPEmail("");
-    setPName("");
-    updateExistingPotluck(props.potluck);
+    if (validateAll()) {
+      const oldPotluck = props.potluck;
+      oldPotluck.numberAttending = oldPotluck.numberAttending + 1;
+      oldPotluck.participants.push({
+        name: pName,
+        email: pEmail,
+        attending: true,
+      });
+      props.setPotluck(oldPotluck);
+      setPEmail("");
+      setPName("");
+      updateExistingPotluck(props.potluck);
+    }
   };
 
   const handleRemoveClick = () => {
-    const oldPotluck = props.potluck;
-    const newP = oldPotluck.participants.filter((p) => p.email !== pEmail);
-    oldPotluck.participants = newP;
-    props.setPotluck(oldPotluck);
-    setPEmail("");
-    setPName("");
-    updateExistingPotluck(props.potluck);
+    if (validateAll()) {
+      const oldPotluck = props.potluck;
+      const newP = oldPotluck.participants.filter((p) => p.email !== pEmail);
+      if (newP.length !== oldPotluck.participants.length) {
+        oldPotluck.participants = newP;
+        oldPotluck.numberAttending = oldPotluck.numberAttending - 1;
+        props.setPotluck(oldPotluck);
+        setPEmail("");
+        setPName("");
+        updateExistingPotluck(props.potluck);
+      }
+    }
   };
 
   return props.trigger ? (
@@ -81,11 +137,15 @@ function ParticipantsPopup(props) {
               />
               <TextField
                 id="participantEmail"
+                name="ParticipantEmail"
                 label="Email"
                 variant="outlined"
                 required="true"
                 value={pEmail}
                 onChange={(e) => setPEmail(e.target.value)}
+                onBlur={validateOne}
+                helperText={validations.ParticipantEmail}
+                error={errorState.ParticipantEmail}
               />
               <br></br>
               <a
