@@ -35,6 +35,18 @@ function NewPotluck() {
   const [location, setLocation] = useState({ province: "" });
   const { user, setUser } = React.useContext(UserContext);
 
+  const [validations, setValidations] = React.useState({
+    eventName: "",
+    organizerEmail: "",
+    eventPass: "",
+  });
+
+  const [errorState, setErrorState] = React.useState({
+    eventName: false,
+    organizerEmail: false,
+    eventPass: false,
+  });
+
   useEffect(() => {
     if (user) {
       setOrganizerName(user.fname + " " + user.lname);
@@ -57,25 +69,88 @@ function NewPotluck() {
     });
   };
 
+  const validateOne = (e) => {
+    const { name, value } = e.target;
+    let message = "";
+    let error = false;
+
+    if (!value) {
+      message = `${name} is required`;
+      error = true;
+    }
+
+    if (value && name === "organizerEmail" && !/\S+@\S+\.\S+/.test(value)) {
+      message = "Email format must be as example@mail.com";
+      error = true;
+    }
+
+    setValidations({ ...validations, [name]: message });
+    setErrorState({ ...errorState, [name]: error });
+  };
+
+  const validateAll = () => {
+    const validation = { eventName: "", organizerEmail: "", eventPass: "" };
+    const errorS = {
+      eventName: false,
+      organizerEmail: false,
+      eventPass: false,
+    };
+    let isValid = true;
+
+    if (!eventName) {
+      validation.eventName = "Name is required";
+      setErrorState({ ...errorState, eventName: true });
+      isValid = false;
+    }
+
+    if (!organizerEmail) {
+      validation.organizerEmail = "Email is required";
+      setErrorState({ ...errorState, organizerEmail: true });
+      isValid = false;
+    }
+
+    if (organizerEmail && !/\S+@\S+\.\S+/.test(organizerEmail)) {
+      validation.organizerEmail = "Email format must be as example@mail.com";
+      setErrorState({ ...errorState, organizerEmail: true });
+      isValid = false;
+    }
+
+    if (!eventPass) {
+      validation.eventPass = "Event pass is required";
+      setErrorState({ ...errorState, eventPass: true });
+      isValid = false;
+    }
+
+    if (!isValid) {
+      setValidations(validation);
+    }
+
+    return isValid;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const newPotluck = {
-      title: eventName,
-      owner: { name: organizerName, email: organizerEmail },
-      location: location,
-      eventPass: eventPass,
-      eventDate: dateValue,
-      numberExpected: expectNumber,
-      theme: theme,
-      choiceStyle: choiceStyle,
-    };
-    try {
-      const created = await createNewPotluck(newPotluck);
-      console.log("Created: ", created);
-      setEventCreated(true);
-      setTimeout(() => navigate(`/home/ExistingEvents/${created._id}`), 3000);
-    } catch (error) {
-      console.log("error", error);
+    const isValid = validateAll();
+
+    if (isValid) {
+      const newPotluck = {
+        title: eventName,
+        owner: { name: organizerName, email: organizerEmail },
+        location: location,
+        eventPass: eventPass,
+        eventDate: dateValue,
+        numberExpected: expectNumber,
+        theme: theme,
+        choiceStyle: choiceStyle,
+      };
+      try {
+        const created = await createNewPotluck(newPotluck);
+        console.log("Created: ", created);
+        setEventCreated(true);
+        setTimeout(() => navigate(`/home/ExistingEvents/${created._id}`), 3000);
+      } catch (error) {
+        console.log("error", error);
+      }
     }
   };
 
@@ -97,10 +172,14 @@ function NewPotluck() {
           sx={{ minWidth: 600 }}
           id="EventName"
           label="Event Name"
+          name="eventName"
           variant="outlined"
           required
           value={eventName}
           onChange={(e) => setEventName(e.target.value)}
+          onBlur={validateOne}
+          helperText={validations.eventName}
+          error={errorState.eventName}
         />
 
         <div>
@@ -116,11 +195,16 @@ function NewPotluck() {
           <TextField
             sx={{ minWidth: 300 }}
             id="OrganizerEmail"
+            name="organizerEmail"
             label="Organizer Email"
             value={organizerEmail}
             defaultValue={" "}
             variant="outlined"
             onChange={(e) => setOrganizerEmail(e.target.value)}
+            onBlur={validateOne}
+            required
+            helperText={validations.organizerEmail}
+            error={errorState.organizerEmail}
           />
         </div>
         <div>
@@ -141,6 +225,10 @@ function NewPotluck() {
             required
             variant="outlined"
             onChange={(e) => setEventPass(e.target.value)}
+            onBlur={validateOne}
+            name="eventPass"
+            helperText={validations.eventPass}
+            error={errorState.eventPass}
           />
 
           <TextField
