@@ -1,14 +1,37 @@
-<h1 align="center">
-Potlucker
-</h1>
+&nbsp;
+
+<div align="center">
+<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/potluckers-logo.png?raw=true" alt="Potluckers logo" style="height:80px" />
+<br>
+
+</div>
+&nbsp;
+<div align="center">
+<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/application-website-blue" > 
+<a href="https://spoonacular.com/food-api"> <img src="https://img.shields.io/badge/API-Spoonacular-orange"> </a>
+</div>
+
+&nbsp;
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Kamikaze Cheese Team Members](#kamikaze-cheese-team-members)
-- [Getting Started with Create React App](#getting-started-with-create-app)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
 - [Available Scripts](#available-scripts)
+  - [`npm start`](#npm-start)
+  - [`npm test`](#npm-test)
+  - [`npm run build`](#npm-run-build)
+  - [`npm run eject`](#npm-run-eject)
+- [Learn More](#learn-more)
+  - [Code Splitting](#code-splitting)
+  - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+  - [Making a Progressive Web App](#making-a-progressive-web-app)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Deployment](#deployment)
+  - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
 
 ## Introduction
 
