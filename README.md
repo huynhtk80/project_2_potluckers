@@ -7,7 +7,7 @@
 </div>
 &nbsp;
 <div align="center">
-<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/application-website-blue" > 
+<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/app-website-blue" > 
 <a href="https://spoonacular.com/food-api"> <img src="https://img.shields.io/badge/API-Spoonacular-orange"> </a>
 </div>
 
