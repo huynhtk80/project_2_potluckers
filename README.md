@@ -1,17 +1,29 @@
 &nbsp;
 
 <div align="center">
-<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/potluckers-logo.png?raw=true" alt="Potluckers logo" style="height:80px" />
+<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/potluckers-logo.png?raw=true" alt="Potlucker logo" style="height:80px" />
 <br>
-
+Where Awesome Happens!
 </div>
 &nbsp;
 <div align="center">
-<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/app-website-blue" > 
+<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/application-website-blue" > 
 <a href="https://spoonacular.com/food-api"> <img src="https://img.shields.io/badge/API-Spoonacular-orange"> </a>
 </div>
 
 &nbsp;
+<div align="center">
+<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/landing-page.jpg?raw=true" alt="Potlucker Landing Page" style="width:100%">
+</div>
+<!-- <h1 align="center">QuikDine-mobile</h1> -->
+&nbsp;
+<div>
+<a href="https://www.potlucker.ca">
+<img src="https://img.shields.io/badge/Website%20-potlucker%20%E2%86%92-gray.svg?colorA=61c265&colorB=4CAF50&style=for-the-badge"/></a>
+&nbsp;
+</div>
+&nbsp;
+
 
 ## Table of Contents
 
@@ -39,14 +51,16 @@ Organizing potlucks is hard. You need to know allergies, preferences, cutlery, c
 
 ## Technologies Used
 
-Node.js Javascript HTML CSS MongoDB Express.js
+    + Core: Node.js Javascript HTML CSS MongoDB Express.js
+    + API: Spoonacular API
+    + Collaboration: Discord Github Zoom Trello Basecamp Figma
 
 ## Kamikaze Cheese Team Members
 
-Kshitija Shirsathe
-Romell Bermundo
-Timothy Huynh
-Tyler Sartison
+- Kshitija Shirsathe
+- Romell Bermundo
+- Timothy Huynh
+- Tyler Sartison
 
 ## Getting Started with Create React App
 
