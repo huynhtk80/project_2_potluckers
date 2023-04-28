@@ -1,28 +1,30 @@
-import React, { useEffect, useState } from "react";
-import kWings from "../img/potlucker-kamikaze-wings.jpg";
+// import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { getRecipeById } from "../api/recipeAPIs";
 import "./PopupRecipe.css";
-import { getRecipeIngredients } from "../api/recipeAPIs";
 
 function PopupRecipe(props) {
-  const [Ingredients, setIngredients] = useState();
+  const [recipe, setRecipe] = useState();
 
-  // useEffect(() => {
-  //   const fetchRecipeIngredient = async () => {
-  //     const fetchedRecipeIngredients = await getRecipeIngredients(
-  //       props.recipe.id
-  //     );
-  //     if (props.trigger) {
-  //       setIngredients(fetchedRecipeIngredients);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      try {
+        console.log(props.id);
+        const fetchedInformation = await getRecipeById(props.id);
+        setRecipe(fetchedInformation);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    if (props.trigger) {
+      fetchRecipe();
+    }
 
-  //   fetchRecipeIngredient();
+    return () => {};
+  }, [props.trigger]);
 
-  //   return () => {};
-  // }, [props.trigger]);
-
-  return props.trigger ? (
+  return props.trigger && recipe ? (
     <>
       <div className="popupR" id="popupR">
         <div className="popupR__content">
@@ -31,16 +33,12 @@ function PopupRecipe(props) {
           </a>
 
           <div className="popupR__left">
-            <img
-              src={props.recipe.image}
-              alt="Tour photo"
-              className="popupR__img"
-            />
+            <img src={recipe.image} alt="Tour photo" className="popupR__img" />
           </div>
 
           <div className="popupR__right">
             <h2 className="heading-secondary u-margin-bottom-small">
-              {props.recipe.title}
+              {recipe.title}
             </h2>
             <h3 className="heading-tertiary u-margin-bottom-small">
               Always A Hit &ndash; Add this item to your next potluck menu!
@@ -50,7 +48,7 @@ function PopupRecipe(props) {
           <div className="popupR__right">
             <h2>Instructions</h2>
             <p className="popupR__text">
-              {props.recipe.analyzedInstructions[0].steps.map(
+              {recipe.analyzedInstructions[0].steps.map(
                 (instructions, index) => (
                   <>
                     <p>
@@ -62,14 +60,21 @@ function PopupRecipe(props) {
             </p>
           </div>
 
-          {/* <div className="popupR__left_bottom">
+          <div className="popupR__left_bottom">
             <h2>Ingredients</h2>
-          </div> */}
-          <div className="popupR__bottomlink">
+            {recipe.extendedIngredients.map((ingredients, index) => (
+              <p>
+                {index + 1}. {ingredients.name} -{" "}
+                {ingredients.measures.metric.amount}{" "}
+                {ingredients.measures.metric.unitLong}
+              </p>
+            ))}{" "}
+          </div>
+          {/* <div className="popupR__bottomlink">
             <Link to="/home" className="btn btn--green">
               Save to Favorites
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -62,10 +62,11 @@
 
 .cardR__details {
   padding: 3rem;
+  min-height: 300px;
 }
 .cardR__details ul {
   list-style: none;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .cardR__details ul li {
@@ -75,12 +76,12 @@
 }
 .cardR__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 .cardR__cta {
   text-align: center;
   position: relative;
-  top: 0%;
+  bottom: 0;
   left: 0;
   width: 100%;
   padding: 3rem 4rem 3rem 4rem;

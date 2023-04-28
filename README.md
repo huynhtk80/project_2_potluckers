@@ -1,29 +1,66 @@
-<h1 align="center">
-Potlucker
-</h1>
+&nbsp;
+
+<div align="center">
+<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/potluckers-logo.png?raw=true" alt="Potlucker logo" style="height:80px" />
+<br>
+Where Awesome Happens!
+</div>
+&nbsp;
+<div align="center">
+<img src="https://badge.fury.io/js/npm.svg"> <img src="https://img.shields.io/badge/application-website-blue" > 
+<a href="https://spoonacular.com/food-api"> <img src="https://img.shields.io/badge/API-Spoonacular-orange"> </a>
+</div>
+
+&nbsp;
+<div align="center">
+<img src="https://github.com/huynhtk80/project_2_potluckers/blob/main/src/img/landing-page.jpg?raw=true" alt="Potlucker Landing Page" style="width:100%">
+</div>
+<!-- <h1 align="center">QuikDine-mobile</h1> -->
+&nbsp;
+<div>
+<a href="https://www.potlucker.ca">
+<img src="https://img.shields.io/badge/Website%20-potlucker%20%E2%86%92-gray.svg?colorA=61c265&colorB=4CAF50&style=for-the-badge"/></a>
+&nbsp;
+</div>
+&nbsp;
+
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Kamikaze Cheese Team Members](#kamikaze-cheese-team-members)
-- [Getting Started with Create React App](#getting-started-with-create-app)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
 - [Available Scripts](#available-scripts)
+  - [`npm start`](#npm-start)
+  - [`npm test`](#npm-test)
+  - [`npm run build`](#npm-run-build)
+  - [`npm run eject`](#npm-run-eject)
+- [Learn More](#learn-more)
+  - [Code Splitting](#code-splitting)
+  - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+  - [Making a Progressive Web App](#making-a-progressive-web-app)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Deployment](#deployment)
+  - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
 
 ## Introduction
 
-Organizing potlucks is hard. You need to know allergies, preferences, cutlery, clean-up crew and much more. What if I tell you that there is an app to make you life easier? Well, we present to you the Potlockers app. This application is made by the Kamikaze Cheese Team and our goal is to make organizing potlucks easy and convenient. Our team core value is food and doing good. Potlockers will allow you to add/remove foods from you potlock list. In addition, you can look up recipes for the food your are bringing, organize who brings in the cutlery, organize who cleans-up after the event, exclude certain types of food because of allergies and other additional features. We hope that by using this app, eating food with the people you cherish can create great experiences they can never forget.
+Organizing potlucks is hard. You need to know allergies, preferences, cutlery, clean-up crew and much more. What if I tell you that there is an app to make you life easier? Well, we present to you the Potlocker app. This application is made by the Kamikaze Cheese Team and our goal is to make organizing potlucks easy and convenient. Our team core value is food and doing good. Potlocker will allow you to add/remove foods from you potlock list. In addition, you can look up recipes for the food your are bringing, organize who brings in the cutlery, organize who cleans-up after the event, exclude certain types of food because of allergies and other additional features. We hope that by using this app, eating food with the people you cherish can create great experiences they can never forget.
 
 ## Technologies Used
 
-Node.js Javascript HTML CSS MongoDB Express.js
+    + Core: Node.js Javascript HTML CSS MongoDB Express.js
+    + API: Spoonacular API
+    + Collaboration: Discord Github Zoom Trello Basecamp Figma
 
 ## Kamikaze Cheese Team Members
 
-Kshitija Shirsathe
-Romell Bermundo
-Timothy Huynh
-Tyler Sartison
+- Kshitija Shirsathe
+- Romell Bermundo
+- Timothy Huynh
+- Tyler Sartison
 
 ## Getting Started with Create React App
 

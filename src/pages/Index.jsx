@@ -1,10 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./dashboard.css"
+// import { Link } from "react-router-dom";
 
 function Index() {
   return (
-    <section className="section-tours">
-      <h1>Learn More About Potlucker</h1>
+    <>
+    <br />
+    <div className="main-title">
+      <h1 className="heading-secondary">create awesome moments</h1>
+    </div>
+      <br />
+      <br />
+      <br />
 
       <div className="row">
         <div className="col-1-of-3">
@@ -13,29 +20,25 @@ function Index() {
               <div className="card__picture card__picture--7">&nbsp;</div>
               <h4 className="card__heading">
                 <span className="card__heading-span card__heading-span--1">
-                  Keeps Track Of Progress{" "}
+                  Find a Recipe{" "}
                 </span>
               </h4>
               <div className="card__details">
-                <ul>
-                  <li>Feature 1</li>
-                  <li>Feature 2</li>
-                  <li>Feature 3</li>
-                  <li>Feature 4</li>
-                  <li>Feature 5</li>
-                </ul>
+                <p className="card__description">
+                Want to find an awesome recipe to try with your buddies, your family, and your loved ones? We got you covered! Ask the recipe that you want to find and we'll find it for you!
+                </p>
               </div>
             </div>
             <div className="card__side card__side--back card__side--back-1">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">
-                    Tracks Everyone's Progress?
+                  <p className="card__description">
+                    Want more Recipe ideas?
                   </p>
-                  <p className="card__price-value">Fantastic!</p>
+                  <p className="card__price-value">Awesome!</p>
                 </div>
-                <a href="#popup7" className="btn btn--white">
-                  Learn More
+                <a href="/home/mealplanningrecipes" className="btn btn--white">
+                  Find a Recipe
                 </a>
               </div>
             </div>
@@ -48,27 +51,23 @@ function Index() {
               <div className="card__picture card__picture--8">&nbsp;</div>
               <h4 className="card__heading">
                 <span className="card__heading-span card__heading-span--2">
-                  Keeps Everyone Informed
+                  find existing events
                 </span>
               </h4>
               <div className="card__details">
-                <ul>
-                  <li>Feature 1</li>
-                  <li>Feature 2</li>
-                  <li>Feature 3</li>
-                  <li>Feature 4</li>
-                  <li>Feature 5</li>
-                </ul>
+                <p className="card__description">
+                Do you want to find a place where all the good foods are? Do you want to have a good time? Let us help you find potluck events in your area!
+                </p>
               </div>
             </div>
             <div className="card__side card__side--back card__side--back-2">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">Everyone's Informed?</p>
-                  <p className="card__price-value">So Great!</p>
+                  <p className="card__description">Have a Party?</p>
+                  <p className="card__price-value">Marvelous!</p>
                 </div>
-                <a href="#popup8" className="btn btn--white">
-                  Learn More
+                <a href="/home/existingevents" className="btn btn--white">
+                  find events
                 </a>
               </div>
             </div>
@@ -81,34 +80,30 @@ function Index() {
               <div className="card__picture card__picture--9">&nbsp;</div>
               <h4 className="card__heading">
                 <span className="card__heading-span card__heading-span--3">
-                  Creates Your Perfect Menus
+                  Create Event
                 </span>
               </h4>
               <div className="card__details">
-                <ul>
-                  <li>Feature 1</li>
-                  <li>Feature 2</li>
-                  <li>Feature 3</li>
-                  <li>Feature 4</li>
-                  <li>Feature 5</li>
-                </ul>
+                <p className="card__description">
+                Want to be the coolest person in the party? Then let's make the party! Just click a few buttons and you will be the host of an awesome potluck party!
+                </p>
               </div>
             </div>
             <div className="card__side card__side--back card__side--back-3">
               <div className="card__cta">
                 <div className="card__price-box">
-                  <p className="card__price-only">The Perfect Menu?</p>
-                  <p className="card__price-value">Spectacular!</p>
+                  <p className="card__description">Have a Party?</p>
+                  <p className="card__price-value">Amazing!</p>
                 </div>
-                <a href="#popup9" className="btn btn--white">
-                  Learn More
+                <a href="/home/planyourownevent" className="btn btn--white">
+                  Create event
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
