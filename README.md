@@ -47,7 +47,7 @@ Where Awesome Happens!
 
 ## Introduction
 
-Organizing potlucks is hard. You need to know allergies, preferences, cutlery, clean-up crew and much more. What if I tell you that there is an app to make you life easier? Well, we present to you the Potlockers app. This application is made by the Kamikaze Cheese Team and our goal is to make organizing potlucks easy and convenient. Our team core value is food and doing good. Potlockers will allow you to add/remove foods from you potlock list. In addition, you can look up recipes for the food your are bringing, organize who brings in the cutlery, organize who cleans-up after the event, exclude certain types of food because of allergies and other additional features. We hope that by using this app, eating food with the people you cherish can create great experiences they can never forget.
+Organizing potlucks is hard. You need to know allergies, preferences, cutlery, clean-up crew and much more. What if I tell you that there is an app to make you life easier? Well, we present to you the Potlocker app. This application is made by the Kamikaze Cheese Team and our goal is to make organizing potlucks easy and convenient. Our team core value is food and doing good. Potlocker will allow you to add/remove foods from you potlock list. In addition, you can look up recipes for the food your are bringing, organize who brings in the cutlery, organize who cleans-up after the event, exclude certain types of food because of allergies and other additional features. We hope that by using this app, eating food with the people you cherish can create great experiences they can never forget.
 
 ## Technologies Used
 
