@@ -41,6 +41,7 @@
 }
 .popupR__left_bottom {
   padding: 1rem 1rem;
+  font-size: 1.5rem;
   width: 33%;
   float: left;
 }
@@ -62,7 +63,7 @@
 }
 .popupR__text {
   display: table-cell;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   text-align: left;
   margin-bottom: 4rem;
   -moz-hyphens: auto;
@@ -136,12 +137,18 @@
     width: 100%;
     display: table-row;
     /* vertical-align: middle; */
+
     padding: 1rem 1.7rem;
+  }
+  .popupR__left_bottom {
+    padding: 1rem 1rem;
+    width: 100%;
+    font-size: 2rem;
   }
 
   .popupR__text {
     display: table-row-group;
-    font-size: 3;
+    font-size: 2rem;
     margin: auto;
     /* margin-bottom: 1.3rem; */
     padding-bottom: 2.5rem;

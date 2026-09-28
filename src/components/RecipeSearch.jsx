@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { CUISINES, INTOLERANCES } from "./searchOptions";
+// import { CUISINES, INTOLERANCES } from "./searchOptions";
 import "./recipeSearch.css";
 import { complexSearchGet } from "../api/recipeAPIs";
 import RecipeCard from "./RecipeCard";
 
 function RecipeSearch() {
-  const [selectedIntolerances, setSelectedIntolerances] = useState(null);
-  const [selectedCuisines, setSelectedCuisines] = useState(null);
+  // const [selectedIntolerances, setSelectedIntolerances] = useState(null);
+  // const [selectedCuisines, setSelectedCuisines] = useState(null);
   const [queryString, setQueryString] = useState(null);
   const [results, setResults] = useState(null);
 
@@ -17,7 +17,7 @@ function RecipeSearch() {
   };
 
   return (
-    <div className="formContainer">
+    <div className="formContainer search-container">
       <form className="searchbox" onSubmit={handleSubmit}>
         <label>Search: </label>
         <input
@@ -43,7 +43,7 @@ function RecipeSearch() {
             onChange={setSelectedCuisines}
           />
         </div> */}
-        <button>submit</button>
+        <button className="btn btn--green search-btn">submit</button>
       </form>
 
       {results && <h2>Search Results</h2>}

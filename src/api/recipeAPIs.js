@@ -34,5 +34,6 @@ export const getRecipeById = async (_id) => {
     url: `/recipes/recipeInformation/${_id}`,
   });
   const recipes = await response.data;
+
   return recipes;
 };

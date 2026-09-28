@@ -11,6 +11,7 @@ function Aboutus() {
     <div className="aboutus-container">
       <div className="aboutus-firstbox">
         <div className="aboutus-main">
+          <br/>
           <span className="title-main">
             <h1>Potluck made easy</h1>
           </span>
@@ -58,6 +59,7 @@ function Aboutus() {
           />
         </div>
         <div className="aboutus-main2">
+          <br />
           <span className="title-main">
             <h1>The art of good Food</h1>
           </span>

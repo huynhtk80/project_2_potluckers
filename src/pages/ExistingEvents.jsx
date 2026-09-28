@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getexistingPotluck } from "../api/potluckAPI";
 import FullFeaturedCrudGrid from "../components/datatable";
-import EditDataTable from "../components/EditDataTable";
 import ParticipantsPopup from "../components/ParticipantsPopup";
 
 function ExistingEvents() {
@@ -51,11 +50,21 @@ function ExistingEvents() {
               <p>{potluck.location && potluck.location.postalcode}</p>
               <p>Anticipated Attendees: {potluck.numberExpected}</p>
               <p>Confirmed Attendees: {potluck.numberAttending}</p>
+              <p>
+                Share this link to access potluck:
+                <a
+                  href={`https://www.potlucker.ca/home/ExistingEvents/${potluck._id}`}
+                  target="_blank"
+                >
+                  www.potlucker.ca/home/ExistingEvents/{potluck._id}
+                </a>
+              </p>
               <a
                 onClick={() => setParticipantPopup(true)}
                 className="btn btn--green"
+                style={{ padding: "7px", margin: "5px" }}
               >
-                See who's coming!
+                Let them know you are coming
               </a>
               <FullFeaturedCrudGrid
                 setPotluck={setPotluck}
